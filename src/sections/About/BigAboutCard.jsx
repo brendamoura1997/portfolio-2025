@@ -47,19 +47,6 @@ const BigAboutCard = ({
           <p className="text-gray-500 text-sm italic mb-4">{duration}</p>
 
           {/* Ver mais */}
-          <AnimatePresence>
-            {isExpanded && (
-              <motion.img
-                src={ImageSrc}
-                alt="Detail Image"
-                className="w-full h-auto rounded-lg mb-4 border border-[#00ffcc]"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.8 }}
-                transition={{ duration: 0.3 }}
-              />
-            )}
-          </AnimatePresence>
 
           <p className="text-justify text-gray-300 mb-4 leading-relaxed break-words">
             {description}

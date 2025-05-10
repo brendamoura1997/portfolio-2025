@@ -31,6 +31,8 @@ const AboutBottom = () => {
         scrollTrigger: {
           trigger: experienceHeadingRef.current,
           start: "top 85%",
+          //   toggleActions: "restart none none none",
+          //   invalidateOnRefresh: true,
         },
       }
     );
@@ -47,6 +49,8 @@ const AboutBottom = () => {
         scrollTrigger: {
           trigger: educationHeadingRef.current,
           start: "top 85%",
+          //   toggleActions: "restart none none none",
+          //   invalidateOnRefresh: true,
         },
       }
     );
@@ -65,6 +69,8 @@ const AboutBottom = () => {
           scrollTrigger: {
             trigger: card,
             start: "top 90%",
+            toggleActions: "restart none none none",
+            invalidateOnRefresh: true,
           },
         }
       );
@@ -84,6 +90,8 @@ const AboutBottom = () => {
           scrollTrigger: {
             trigger: card,
             start: "top 90%",
+            toggleActions: "restart none none none",
+            invalidateOnRefresh: true,
           },
         }
       );
@@ -98,7 +106,7 @@ const AboutBottom = () => {
             ref={experienceHeadingRef}
             className="text-2xl md:text-3xl font-bold text-[#72fc3c] pb-5 md:pb-10 ml-[-20px] md:ml-0"
           >
-            Experiência
+            EXPERIÊNCIA
           </h3>
           <div className="flex flex-col gap-6">
             {experience.map((exp, index) => (
@@ -120,7 +128,7 @@ const AboutBottom = () => {
             ref={educationHeadingRef}
             className="text-2xl md:text-3xl font-bold text-[#72fc3c] pb-5 md:pb-10 ml-[-20px] md:ml-0"
           >
-            Formação
+            FORMAÇÃO
           </h3>
           <div className="flex flex-col gap-6">
             {education.map((edu, index) => (
