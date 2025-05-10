@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const BigAboutCard = ({
+const ModalCard = ({
   title,
   subtitle,
   duration,
-  ImageSrc,
+  // ImageSrc,
   description,
   extraDetails,
   onClose,
@@ -88,4 +88,4 @@ const BigAboutCard = ({
   );
 };
 
-export default BigAboutCard;
+export default ModalCard;

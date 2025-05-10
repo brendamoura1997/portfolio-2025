@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { experience } from "../../utils/experienceData";
 import { education } from "../../utils/educationData";
-import BigAboutCard from "./BigAboutCard";
+import ModalCard from "./ModalCard";
 import CareerCard from "../../components/CareerCard";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -67,7 +67,7 @@ const AboutBottom = () => {
           delay: i * 0.1,
           scrollTrigger: {
             trigger: card,
-            start: "top 90%",
+            start: "top 100%",
             toggleActions: "restart none none none",
             invalidateOnRefresh: true,
           },
@@ -88,7 +88,7 @@ const AboutBottom = () => {
           delay: i * 0.1,
           scrollTrigger: {
             trigger: card,
-            start: "top 90%",
+            start: "top 100%",
             toggleActions: "restart none none none",
             invalidateOnRefresh: true,
           },
@@ -172,7 +172,7 @@ const AboutBottom = () => {
             onClick={(e) => e.stopPropagation()}
             className="relative max-w-[90%] md:max-w-[70%]"
           >
-            <BigAboutCard
+            <ModalCard
               {...selectedEducation}
               onClose={() => setSelectedEducation(null)}
             />
