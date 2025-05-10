@@ -30,7 +30,7 @@ const SocialMedia = () => (
         initial={{
           opacity: 0,
           x: -20,
-          filter: "drop-shadow(0px 0px 10px #6cff32)",
+          filter: "drop-shadow(0px 0px 10px var(--neon-cyan))",
         }}
         animate={{
           opacity: 1,

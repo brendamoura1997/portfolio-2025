@@ -42,31 +42,38 @@ const Navbar = () => {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: isMounted ? 1 : 0, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="fixed top-5 right-1 z-50 w-full flex justify-end px-4"
+      className="fixed top-5 right-1 z-50 w-full flex justify-center px-4"
     >
       {/* Desktop Navbar */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: isMounted ? 1 : 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="hidden lg:flex items-center justify-center max-w-[850px] w-full py-3 bg-[#111] clip-diagonal border border-[#00ffcc] hover:border-[#111] transition-all duration-500 arcade-font text-sm space-x-10"
+        className="hidden lg:flex items-center justify-center max-w-[850px] w-full px-4 bg-[#111] clip-diagonal 
+        border border-[#111] hover:border-[var(--neon-cyan)]/50 transition-all duration-500 arcade-font text-sm"
+        // className="hidden lg:flex items-center justify-center max-w-[850px] w-full py-3 bg-[#111] clip-diagonal
+        // border border-[var(--neon-cyan)] hover:border-[#111] transition-all duration-500 arcade-font text-sm gap-5"
       >
         {menuItems.map((item, index) => (
-          <motion.button
-            key={item.target}
-            onClick={() => scrollToSection(item.target)}
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: isMounted ? 1 : 0, x: 0 }}
-            transition={{
-              duration: 0.6,
-              delay: isMounted ? index * 0.2 : 0,
-              ease: "easeOut",
-            }}
-            className="px-3 whitespace-nowrap rounded-sm cursor-pointer transition duration-300 hover:shadow-md hover:shadow-[#c3ff49]"
-          >
-            [ {item.label} ]
-          </motion.button>
+          <>
+            <p>|</p>
+            <motion.button
+              key={item.target}
+              onClick={() => scrollToSection(item.target)}
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: isMounted ? 1 : 0, x: 0 }}
+              transition={{
+                duration: 0.6,
+                delay: isMounted ? index * 0.2 : 0,
+                ease: "easeOut",
+              }}
+              className="w-48 py-4 whitespace-nowrap rounded-sm cursor-pointer transition duration-300  hover:shadow-[0_4px_5px_-1px_#00ffff]"
+            >
+              {item.label}
+            </motion.button>
+          </>
         ))}
+        <p>|</p>
       </motion.div>
 
       {/* Mobile & Tablet Navbar */}

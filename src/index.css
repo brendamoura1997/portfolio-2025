@@ -49,6 +49,11 @@
     0 0 20px rgba(200, 255, 0, 0.4);
 }
 
+.neon-text-glow-cyan {
+  text-shadow: 0 0 5px rgba(0, 255, 204, 0.8), 0 0 10px rgba(0, 255, 204, 0.6),
+    0 0 20px rgba(0, 255, 204, 0.4);
+}
+
 .glow-image-cyan {
   box-shadow: 0 0 10px rgba(0, 255, 204, 0.8), 0 0 20px rgba(0, 255, 204, 0.6),
     0 0 30px rgba(0, 255, 204, 0.4);
