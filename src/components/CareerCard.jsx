@@ -1,10 +1,4 @@
-const ExperienceCard = ({
-  title,
-  subtitle,
-  duration,
-  description,
-  onClick,
-}) => {
+const CareerCard = ({ title, subtitle, duration, description, onClick }) => {
   return (
     <div
       className="max-w-xl p-2 px-4 rounded-md relative bg-[#111111] scale-100 sm:scale-90 hover:shadow-md hover:shadow-[#00ffcc] cursor-pointer"
@@ -22,4 +16,4 @@ const ExperienceCard = ({
   );
 };
 
-export default ExperienceCard;
+export default CareerCard;

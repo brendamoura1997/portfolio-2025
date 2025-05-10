@@ -1,11 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import ExperienceCard from "./ExperienceCard";
-import EducationCard from "./EducationCard";
 import { experience } from "../../utils/experienceData";
 import { education } from "../../utils/educationData";
 import BigAboutCard from "./BigAboutCard";
+import CareerCard from "../../components/CareerCard";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -114,7 +113,7 @@ const AboutBottom = () => {
                 key={index}
                 ref={(el) => (experienceCardsRef.current[index] = el)}
               >
-                <ExperienceCard
+                <CareerCard
                   {...exp}
                   onClick={() => setSelectedExperience(exp)}
                 />
@@ -136,7 +135,7 @@ const AboutBottom = () => {
                 key={index}
                 ref={(el) => (educationCardsRef.current[index] = el)}
               >
-                <EducationCard
+                <CareerCard
                   {...edu}
                   onClick={() => setSelectedEducation(edu)}
                 />
