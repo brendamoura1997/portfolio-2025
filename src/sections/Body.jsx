@@ -9,13 +9,9 @@ import Navbar from "./Layout/Navbar";
 
 const Body = () => {
   return (
-    <div className="relative flex flex-col bg-black text-white overflow-hidden min-h-screen">
-      <div className="bg-black">
-        {" "}
-        <div className="w-full flex flex-row justify-between relative z-10">
-          <Navbar />
-        </div>
-      </div>
+    <div className="relative flex flex-col bg-[#010610] text-white overflow-hidden min-h-screen">
+      {" "}
+      <Navbar />
       <Intro id="intro" />
       <About id="about" />
       <Project id="projects" />
