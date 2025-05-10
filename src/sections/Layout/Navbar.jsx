@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -42,23 +42,21 @@ const Navbar = () => {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: isMounted ? 1 : 0, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="fixed top-5 right-1 z-50 w-full flex justify-center px-4"
+      className="fixed top-0 z-50 w-full bg-[#010a16]/50 backdrop-blur-3xl flex justify-center px-4 shadow-[0_10px_15px_rgba(1,10,22,0.7)]"
     >
       {/* Desktop Navbar */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: isMounted ? 1 : 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="hidden lg:flex items-center justify-center max-w-[850px] w-full px-4 bg-[#111] clip-diagonal 
-        border border-[#111] hover:border-[var(--neon-cyan)]/50 transition-all duration-500 arcade-font text-sm"
-        // className="hidden lg:flex items-center justify-center max-w-[850px] w-full py-3 bg-[#111] clip-diagonal
-        // border border-[var(--neon-cyan)] hover:border-[#111] transition-all duration-500 arcade-font text-sm gap-5"
+        className="hidden lg:flex items-center justify-center w-full clip-diagonal 
+         transition-all duration-500 arcade-font text-sm"
       >
         {menuItems.map((item, index) => (
-          <>
-            <p>|</p>
+          <React.Fragment key={item.target}>
+            {index > 0 && <p>|</p>}{" "}
+            {/* Mostra o separador apenas se não for o primeiro item */}
             <motion.button
-              key={item.target}
               onClick={() => scrollToSection(item.target)}
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: isMounted ? 1 : 0, x: 0 }}
@@ -67,13 +65,13 @@ const Navbar = () => {
                 delay: isMounted ? index * 0.2 : 0,
                 ease: "easeOut",
               }}
-              className="w-48 py-4 whitespace-nowrap rounded-sm cursor-pointer transition duration-300  hover:shadow-[0_4px_5px_-1px_#00ffff]"
+              className="w-40 py-5 whitespace-nowrap rounded-sm cursor-pointer transition duration-300 
+           border-b-1 border-transparent hover:border-b-[#00ffff] hover:text-[#e4ffff] hover:neon-text-glow-cyan"
             >
               {item.label}
             </motion.button>
-          </>
+          </React.Fragment>
         ))}
-        <p>|</p>
       </motion.div>
 
       {/* Mobile & Tablet Navbar */}

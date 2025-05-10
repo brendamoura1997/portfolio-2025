@@ -43,6 +43,18 @@
   --neon-cyan: #00ffff;
 }
 
+.elegant-font {
+  font-family: "segoe ui variable small light", sans-serif;
+}
+
+.elegant-font-subtitle {
+  font-family: "segoe ui variable small semibol", sans-serif;
+}
+
+.my-name-font {
+  font-family: "Palatino Linotype", serif;
+}
+
 /* Efeito Neon Text */
 .neon-text {
   text-shadow: 0 0 5px rgba(200, 255, 0, 0.8), 0 0 10px rgba(200, 255, 0, 0.6),
@@ -50,6 +62,11 @@
 }
 
 .neon-text-glow-cyan {
+  text-shadow: 0 0 5px rgba(0, 255, 204, 0.8), 0 0 10px rgba(0, 255, 204, 0.6),
+    0 0 20px rgba(0, 255, 204, 0.4);
+}
+
+.hover\:neon-text-glow-cyan:hover {
   text-shadow: 0 0 5px rgba(0, 255, 204, 0.8), 0 0 10px rgba(0, 255, 204, 0.6),
     0 0 20px rgba(0, 255, 204, 0.4);
 }

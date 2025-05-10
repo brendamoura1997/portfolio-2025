@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import headImage from "../../assets/images/head.png";
 import { RESUME_URL } from "../../utils/constants";
 import SocialMedia from "../../components/SocialMedia";
 import heroVideo from "../../assets/video/hero.mp4";
@@ -11,7 +10,6 @@ gsap.registerPlugin(ScrollTrigger);
 const Intro = ({ id }) => {
   const containerRef = useRef(null);
   const textRef = useRef(null);
-  const imageRef = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -23,17 +21,6 @@ const Intro = ({ id }) => {
         scrollTrigger: {
           trigger: textRef.current,
           start: "top 80%",
-        },
-      });
-
-      gsap.from(imageRef.current, {
-        opacity: 0,
-        scale: 0.8,
-        duration: 1.2,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: imageRef.current,
-          start: "top 85%",
         },
       });
     }, containerRef);
@@ -61,30 +48,30 @@ const Intro = ({ id }) => {
       <div className=" w-full flex flex-col lg:flex-row justify-center items-center relative">
         <div
           ref={textRef}
-          className="py-10 px-10 text-center lg:text-left lg:order-1 md:mt-20 lg:mt-0 bg-[#000000]/70 shadow-[0_0_20px_rgba(0,0,0,0.6)] rounded-xl"
-          //   className="py-10 px-10 text-center lg:text-left lg:order-1 md:mt-20 lg:mt-0 bg-blue-900/50 shadow-[0_0_20px_rgba(0,0,0,0.6)] rounded-xl"
+          className="py-15 px-15 text-center lg:text-left lg:order-1 md:mt-20 lg:mt-0 bg-[#000000]/10 backdrop-blur-sm shadow-[0_0_20px_rgba(0,0,0,0.6)] rounded-xl"
         >
-          <p className="flex justify-center text-3xl sm:text-3xl md:text-5xl lg:text-3xl pb-3">
-            Seja Bem-vindo!
-          </p>
-          <h1 className="flex justify-center text-3xl sm:text-3xl md:text-5xl lg:text-5xl pb-8">
-            Meu nome é&nbsp;
-            {/* <span className="text-light-lime-green neon-text">BRENDA</span> */}
-            <span className="text-[#ceffff] neon-text-glow-cyan">BRENDA</span>
+          <h1
+            className="flex justify-center my-name-font text-[#ceffff] neon-text-glow-cyan text-3xl sm:text-3xl
+           md:text-5xl lg:text-6xl pb-4"
+          >
+            BRENDA MOURA
           </h1>
-          <div className="flex flex-col sm:flex-row justify-center text-md sm:text-md md:text-xl text-gray-300 pb-4 space-x-0 sm:space-x-2">
-            <h2>Software Developer |</h2>
-            <h2>UX/UI Designer </h2>
-          </div>
-          <h1 className="flex justify-center text-center text-md font-bold pb-4">
-            Construo experiências digitais com o olhar técnico da <br />
-            Ciência da Computação e a criatividade de quem desafia limites.
+          <h2 className="flex flex-col elegant-font-subtitle sm:flex-row justify-center text-md sm:text-md md:text-xl text-gray-300 pb-7 sm:space-x-2">
+            Software Developer
+            {"\u00A0"} {"\u00A0"}
+            <span className="text-[var(--neon-cyan)]  "> |</span>
+            {"\u00A0"} {"\u00A0"}
+            UX/UI Designer
+          </h2>
+          <h1 className="flex justify-center text-[#b4eef1] elegant-font text-center text-md font-extralight pb-7">
+            Construo experiências digitais com o olhar técnico da Ciência <br />{" "}
+            da Computação e a criatividade de quem desafia limites.
           </h1>
-          <div className="flex justify-center gap-10 pt-12 ">
+          <div className="flex justify-center gap-7">
             <a
               href={RESUME_URL}
               download
-              className="relative w-56 text-center  py-2 border border-[var(--neon-cyan)] text-[var(--neon-cyan)] group clip-diagonal"
+              className="relative w-56 text-center py-2 border border-[var(--neon-cyan)] text-[var(--neon-cyan)] group clip-diagonal"
             >
               <span className="absolute inset-0 bg-[var(--neon-cyan)] w-0 group-hover:w-full transition-all duration-300 ease-in-out"></span>
               <span className="relative z-10 group-hover:text-black">
