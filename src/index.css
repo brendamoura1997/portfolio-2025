@@ -71,8 +71,7 @@
 }
 
 .hover\:neon-text-glow-cyan:hover {
-  text-shadow: 0 0 5px rgba(0, 255, 204, 0.8), 0 0 10px rgba(0, 255, 204, 0.6),
-    0 0 20px rgba(0, 255, 204, 0.4);
+  text-shadow: 0 0 5px #b8ffff, 0 0 0px #b8ffff, 0 0 30px #b8ffff;
 }
 
 .glow-image-cyan {

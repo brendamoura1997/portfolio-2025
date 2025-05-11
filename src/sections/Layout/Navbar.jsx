@@ -55,7 +55,7 @@ const Navbar = () => {
       >
         {menuItems.map((item, index) => (
           <React.Fragment key={item.target}>
-            {index > 0 && <p>|</p>}{" "}
+            {index > 0 && <p className="text-[#FFF]/30">|</p>}{" "}
             <motion.button
               onClick={() => scrollToSection(item.target)}
               initial={{ opacity: 0, x: 50 }}
@@ -65,11 +65,11 @@ const Navbar = () => {
                 delay: isMounted ? index * 0.2 : 0,
                 ease: "easeOut",
               }}
-              className="w-40 py-5 whitespace-nowrap rounded-sm cursor-pointer transition duration-300 relative
-             text-white hover:text-[#e4ffff] hover:neon-text-glow-cyan
-             after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full 
-             after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-300 
-             after:bg-gradient-to-r after:from-transparent after:via-[#00ffff] after:to-transparent"
+              className="w-40 py-5 whitespace-nowrap rounded-sm cursor-pointer relative active:scale-90 transition-transform 
+              duration-150 ease-in-out text-[var(--light-gray)] hover:neon-text-glow-cyan hover:text-white after:absolute 
+              after:left-0 after:bottom-0 after:h-[2px] after:w-full after:opacity-0 hover:after:opacity-100 
+              after:transition-opacity after:duration-300 after:bg-gradient-to-r after:from-transparent after:via-[#00ffff] 
+              after:to-transparent"
             >
               {item.label}
             </motion.button>
@@ -82,7 +82,7 @@ const Navbar = () => {
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="p-2 bg-[#111] cursor-pointer border border-[var(--neon-cyan)] hover:border-[var(--neon-cyan)] 
-          transition-all duration-300 rounded-md"
+          rounded-md active:scale-90 transition-transform duration-150 ease-in-out"
         >
           {isOpen ? (
             <X size={24} color="var(--light-cyan)" />
@@ -108,8 +108,9 @@ const Navbar = () => {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: isOpen ? 1 : 0, x: isOpen ? 0 : 30 }}
             transition={{ duration: 0.4, delay: isOpen ? index * 0.1 : 0 }}
-            className="relative block cursor-pointer w-full py-3 whitespace-nowrap transition duration-300 rounded-md
-             border-1 border-transparent hover:shadow-[0_0_10px_3px_#7cffe5] hover:text-[#e4ffff] hover:neon-text-glow-cyan"
+            className="relative block cursor-pointer w-full py-3 whitespace-nowrap rounded-md
+             border-1 border-transparent hover:shadow-[0_0_10px_3px_#7cffe5] hover:text-[#e4ffff] hover:neon-text-glow-cyan
+             active:scale-90 transition-transform duration-150 ease-in-out"
           >
             {item.label}
             <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#00ffff] to-transparent" />
