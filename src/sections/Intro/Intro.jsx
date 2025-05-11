@@ -46,10 +46,10 @@ const Intro = ({ id }) => {
 
       <div className="absolute inset-0 bg-gradient-to-b from-[#0b090a] via-[#0b090a] to-[#000] opacity-30 pointer-events-none"></div>
 
-      <div className=" w-full flex flex-col lg:flex-row justify-center items-center relative">
+      <div className="w-full flex flex-col justify-center items-center relative">
         <div
           ref={textRef}
-          className="py-15 px-15 text-center lg:text-left lg:order-1 md:mt-20 lg:mt-0 bg-[#000000]/10 backdrop-blur-sm 
+          className="px-5 py-10 md:py-15 md:px-15 text-center items-center lg:text-left lg:order-1 md:mt-20 lg:mt-0 bg-[#000000]/10 backdrop-blur-sm 
            rounded-xl shadow-[-0px_-0px_20px_0px_#013880]"
         >
           <button
@@ -57,14 +57,15 @@ const Intro = ({ id }) => {
               const section = document.getElementById("about");
               section?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="flex cursor-pointer justify-center my-name-font text-[#ceffff] neon-text-glow-cyan text-3xl sm:text-3xl
-           md:text-5xl lg:text-6xl py-2 hover:animate-[pulse-glow-text_1s_ease-in-out_infinite] transition-colors duration-100 "
+            className="flex w-full cursor-pointer justify-center text-center items-center my-name-font text-[#ceffff] neon-text-glow-cyan 
+            text-3xl sm:text-3xl md:text-5xl lg:text-6xl py-2 hover:animate-[pulse-glow-text_1s_ease-in-out_infinite] transition-colors 
+            duration-100 "
           >
             BRENDA MOURA
           </button>
           <h2
-            className="flex flex-col elegant-font-subtitle sm:flex-row justify-center text-md sm:text-md md:text-xl
-           text-[#c7d4d5] pb-10 sm:space-x-2"
+            className="flex flex-row elegant-font-subtitle justify-center text-sm lg:text-md md:text-xl w-full
+           text-[var(--text-gray)] pb-10"
           >
             Software Developer
             {"\u00A0"} {"\u00A0"}
@@ -72,13 +73,14 @@ const Intro = ({ id }) => {
             {"\u00A0"} {"\u00A0"}
             UX/UI Designer
           </h2>
-          <h1 className="flex justify-center text-[#cdf2f4] elegant-font text-center text-lg font-extralight pb-5">
-            Construo experiências digitais com o olhar técnico da Ciência <br />{" "}
-            da Computação e a criatividade de quem desafia limites.
+          <h1 className="flex justify-center text-[var(--text-cyan)] elegant-font text-center text-sm md:text-lg font-extralight pb-5">
+            Construo experiências digitais com o olhar técnico da Ciência{" "}
+            <br className="hidden sm:inline" /> da Computação e a criatividade
+            de quem desafia limites.
           </h1>
-          <div className="flex justify-center text-lg gap-7 elegant-font">
+          <div className="flex flex-col sm:flex-row justify-center text-lg sm:text-sm md:text-md gap-7 elegant-font">
             <NeonButton
-              width="w-52"
+              width="w-full md:w-52"
               paddingY="py-3"
               text="Ver projetos"
               onClick={() => {
@@ -88,7 +90,7 @@ const Intro = ({ id }) => {
             />
 
             <NeonButton
-              width="w-52"
+              width="w-full md:w-52"
               paddingY="py-3"
               text="Download do Currículo"
               onClick={() => {
