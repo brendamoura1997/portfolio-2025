@@ -237,3 +237,24 @@
     0% calc(var(--cut-position-left) - var(--cut-size))
   );
 }
+
+@keyframes pulse-glow-button {
+  0%,
+  100% {
+    box-shadow: 0 0 5px #00ffcc;
+  }
+  50% {
+    box-shadow: 0 0 20px #7cffe5;
+  }
+}
+
+@keyframes pulse-glow-text {
+  0%,
+  100% {
+    text-shadow: 0 0 5px rgba(0, 255, 204, 0.8), 0 0 10px rgba(0, 255, 204, 0.6),
+      0 0 20px rgba(0, 255, 204, 0.4);
+  }
+  50% {
+    text-shadow: 0 0 5px #ceffff, 0 0 10px #ceffff, 0 0 20px #ceffff;
+  }
+}

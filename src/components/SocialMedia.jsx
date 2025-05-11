@@ -20,7 +20,7 @@ const socialLinks = [
 ];
 
 const SocialMedia = () => (
-  <div className="flex justify-center space-x-6 mt-10 flex-wrap">
+  <div className="flex justify-center gap-5 mt-10 flex-wrap">
     {socialLinks.map(({ href, icon, alt }, index) => (
       <motion.a
         key={alt}
@@ -29,21 +29,22 @@ const SocialMedia = () => (
         rel="noopener noreferrer"
         initial={{
           opacity: 0,
-          x: -20,
-          filter: "drop-shadow(0px 0px 10px var(--neon-cyan))",
+          x: 0,
+          filter: "drop-shadow(0px 0px 0px 5px var(--neon-cyan))",
         }}
         animate={{
           opacity: 1,
           x: 0,
-          filter: "drop-shadow(1px 1px 0px #00ffcc)",
+          filter: "drop-shadow(0px 0px 5px var(--neon-cyan))",
         }}
         transition={{ duration: 0.5, delay: index * 0.2 }}
-        className="rounded-sm"
+        className="rounded-full"
       >
         <img
           src={icon}
           alt={alt}
-          className="w-8 h-8 sm:w-8 sm:h-8 rounded-sm transition duration-300 hover:shadow-md hover:shadow-[#00ffcc]"
+          className="w-8 h-8 rounded-full border border-[#00ffff]/30 sm:w-8 sm:h-8 transition duration-300 
+          brightness-[0.7] hover:brightness-[2] hover:shadow-[0_0_10px_#00ffcc] hover:border-[#00ffff]"
         />
       </motion.a>
     ))}

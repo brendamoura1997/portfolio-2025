@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { RESUME_URL } from "../../utils/constants";
 import SocialMedia from "../../components/SocialMedia";
 import heroVideo from "../../assets/video/hero.mp4";
+import NeonButton from "../../components/ButtonNeon";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -57,7 +58,7 @@ const Intro = ({ id }) => {
               section?.scrollIntoView({ behavior: "smooth" });
             }}
             className="flex cursor-pointer justify-center my-name-font text-[#ceffff] neon-text-glow-cyan text-3xl sm:text-3xl
-           md:text-5xl lg:text-6xl pb-2"
+           md:text-5xl lg:text-6xl py-2 hover:animate-[pulse-glow-text_1s_ease-in-out_infinite] transition-colors duration-100 "
           >
             BRENDA MOURA
           </button>
@@ -67,7 +68,6 @@ const Intro = ({ id }) => {
           >
             Software Developer
             {"\u00A0"} {"\u00A0"}
-            {/* <span className="text-[var(--neon-cyan)]  "> |</span> */}
             <span> |</span>
             {"\u00A0"} {"\u00A0"}
             UX/UI Designer
@@ -77,28 +77,29 @@ const Intro = ({ id }) => {
             da Computação e a criatividade de quem desafia limites.
           </h1>
           <div className="flex justify-center text-lg gap-7 elegant-font">
-            <button
+            <NeonButton
+              width="w-52"
+              paddingY="py-3"
+              text="Ver projetos"
               onClick={() => {
                 const section = document.getElementById("projects");
                 section?.scrollIntoView({ behavior: "smooth" });
               }}
-              className="relative w-52 cursor-pointer text-center py-3 border rounded-lg border-[var(--neon-cyan)] text-[var(--neon-cyan)]
-  hover:border-[#e4ffff] hover:text-[#e4ffff] hover:neon-text-glow-cyan hover:glow-image-cyan group"
-            >
-              {/* <span className="absolute inset-0 bg-[var(--neon-cyan)] w-0 group-hover:w-full transition-all duration-300 ease-in-out"></span> */}
-              <span className="relative z-10">Ver projetos</span>
-            </button>
+            />
 
-            <a
-              href={RESUME_URL}
-              download
-              className="relative w-52 text-center py-3 border rounded-lg border-[var(--neon-cyan)] text-[var(--neon-cyan)]"
-            >
-              <span className="absolute inset-0 bg-[var(--neon-cyan)] w-0 group-hover:w-full transition-all duration-300 ease-in-out"></span>
-              <span className="relative z-10 group-hover:text-black">
-                Download do Currículo
-              </span>
-            </a>
+            <NeonButton
+              width="w-52"
+              paddingY="py-3"
+              text="Download do Currículo"
+              onClick={() => {
+                const link = document.createElement("a");
+                link.href = RESUME_URL;
+                link.download = "";
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}
+            />
           </div>
           <SocialMedia />
         </div>
