@@ -116,9 +116,9 @@ const AboutTop = () => {
           </div>
         </div>
 
-        <div className="absolute bottom-4 right-6">
+        <div className="absolute bottom-4 right-7">
           <NeonButton
-            width="w-full md:w-48 text-sm md:text-md"
+            width="w-full md:w-107 text-sm md:text-md"
             paddingY="py-3"
             text={showMore ? "Minimizar" : "Veja mais"}
             onClick={() => setShowMore(!showMore)}
