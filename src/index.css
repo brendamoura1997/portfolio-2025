@@ -15,10 +15,253 @@
     font-family: "Inter", sans-serif;
   }
 }
+@media (max-width: 768px) {
+  .mobile-expand {
+    height: 100% !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .tablet\:w-36 {
+    width: 9rem; /* 36 Tailwind */
+  }
+  .tablet\:h-36 {
+    height: 9rem;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1024px) {
+  .tablet-scale {
+    transform: scale(0.9);
+  }
+}
 
 @theme {
   --color-light-lime-green: #c3ff49;
   --light-cyan: #00ffcc;
   --neon-green: #00ff00;
   --neon-cyan: #00ffff;
+
+  --light-cyan: #b8ffff;
+  --light-cyan-title: #ceffff;
+  --text-cyan: #cdf2f4;
+  --text-gray: #c7d4d5;
+}
+
+/******* FONTES *******/
+/* TEXTO */
+.BODY1 {
+  font-family: "segoe ui variable small light", sans-serif;
+}
+
+/* TÍTULO */
+.T1 {
+  font-family: "Palatino Linotype", serif;
+}
+
+.T2 {
+  font-family: "segoe ui variable small semibol", sans-serif;
+}
+
+/******* Efeito Neon Text *******/
+.neon-text {
+  text-shadow: 0 0 5px rgba(200, 255, 0, 0.8), 0 0 10px rgba(200, 255, 0, 0.6),
+    0 0 20px rgba(200, 255, 0, 0.4);
+}
+
+.neon-text-glow-cyan {
+  text-shadow: 0 0 5px rgba(0, 255, 204, 0.8), 0 0 10px rgba(0, 255, 204, 0.6),
+    0 0 20px rgba(0, 255, 204, 0.4);
+}
+
+.hover\:neon-text-glow-cyan:hover {
+  text-shadow: 0 0 5px #b8ffff, 0 0 0px #b8ffff, 0 0 30px #b8ffff;
+}
+
+.glow-image-cyan {
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.8), 0 0 20px rgba(0, 255, 204, 0.6),
+    0 0 30px rgba(0, 255, 204, 0.4);
+}
+
+.hover\:.glow-image-cyan:hover {
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.8), 0 0 20px rgba(0, 255, 204, 0.6),
+    0 0 30px rgba(0, 255, 204, 0.4);
+}
+
+/* ==== clip corner ==== */
+.cut-corner {
+  clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%);
+}
+
+.clip-diagonal {
+  --edge-size: 1em;
+  clip-path: polygon(
+    0% var(--edge-size),
+    var(--edge-size) 0,
+    100% 0,
+    100% calc(100% - var(--edge-size)),
+    calc(100% - var(--edge-size)) 100%,
+    0 100%
+  );
+}
+
+.clip-diagonal-bottom {
+  --edge-size: 1.5em;
+  clip-path: polygon(
+    0% 0,
+    100% 0,
+    100% calc(100% - var(--edge-size)),
+    calc(100% - var(--edge-size)) 100%,
+    var(--edge-size) 100%,
+    0% calc(100% - var(--edge-size))
+  );
+}
+
+.clip-diagonal-top {
+  --edge-size: 1.5em;
+  clip-path: polygon(
+    0% var(--edge-size),
+    var(--edge-size) 0,
+    calc(100% - var(--edge-size)) 0,
+    100% var(--edge-size),
+    100% 100%,
+    0% 100%
+  );
+}
+
+.clip-diagonal-top-right {
+  --edge-size: 1.5em;
+  clip-path: polygon(
+    0% 0,
+    var(--edge-size) 0,
+    calc(100% - var(--edge-size)) 0,
+    100% var(--edge-size),
+    100% 100%,
+    0% 100%
+  );
+}
+
+.clip-diagonal-top-left {
+  --edge-size: 2em;
+  clip-path: polygon(
+    0% var(--edge-size),
+    var(--edge-size) 0,
+    100% 0,
+    100% 100%,
+    0% 100%
+  );
+}
+
+.clip-diagonal-bottom-left {
+  --edge-size: 1.5em;
+  clip-path: polygon(
+    0% 0,
+    100% 0,
+    100% calc(100% - var(--edge-size)),
+    100% 100%,
+    var(--edge-size) 100%,
+    0% calc(100% - var(--edge-size))
+  );
+}
+
+.clip-diagonal-bottom-left-button {
+  --edge-size: 0.8em;
+  clip-path: polygon(
+    0% 0,
+    100% 0,
+    100% calc(100% - var(--edge-size)),
+    100% 100%,
+    var(--edge-size) 100%,
+    0% calc(100% - var(--edge-size))
+  );
+}
+
+.clip-diagonal-bottom-left-big {
+  --edge-size: 3em;
+  clip-path: polygon(
+    0% 0,
+    100% 0,
+    100% calc(100% - var(--edge-size)),
+    100% 100%,
+    var(--edge-size) 100%,
+    0% calc(100% - var(--edge-size))
+  );
+}
+
+.clip-square-middle-left {
+  --cut-size: 1.5em;
+  --cut-position: 50%;
+
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 100%,
+    0% 100%,
+    0% calc(var(--cut-position) + var(--cut-size)),
+    var(--cut-size) calc(var(--cut-position) + var(--cut-size)),
+    var(--cut-size) calc(var(--cut-position) - var(--cut-size)),
+    0% calc(var(--cut-position) - var(--cut-size))
+  );
+}
+
+.clip-square-middle-top {
+  --cut-size: 1.5em;
+  --cut-position: 50%;
+
+  clip-path: polygon(
+    0% 0%,
+    calc(var(--cut-position) - var(--cut-size)) 0%,
+    calc(var(--cut-position) - var(--cut-size)) var(--cut-size),
+    calc(var(--cut-position) + var(--cut-size)) var(--cut-size),
+    calc(var(--cut-position) + var(--cut-size)) 0%,
+    100% 0%,
+    100% 100%,
+    0% 100%
+  );
+}
+
+.clip-square-offset-left-top {
+  --cut-size: 1.5em;
+  --cut-position-top: 50%;
+  --cut-position-left: 70%;
+
+  clip-path: polygon(
+    /* Top Cut */ 0% 0%,
+    calc(var(--cut-position-top) - 2.5em) 0%,
+    calc(var(--cut-position-top) - var(--cut-size)) var(--cut-size),
+    calc(var(--cut-position-top) + var(--cut-size)) var(--cut-size),
+    calc(var(--cut-position-top) + 2.5em) 0%,
+    100% 0%,
+
+    /* Lado direito */ 100% 100%,
+
+    /* Lateral baixa */ 0% 100%,
+
+    /* Corte esquerdo (Mais à baixo) */ 0%
+      calc(var(--cut-position-left) + var(--cut-size)),
+    3.5em calc(var(--cut-position-left) + var(--cut-size)),
+    3.5em calc(var(--cut-position-left) - var(--cut-size)),
+    0% calc(var(--cut-position-left) - var(--cut-size))
+  );
+}
+
+@keyframes pulse-glow-button {
+  0%,
+  100% {
+    box-shadow: 0 0 5px #00ffcc;
+  }
+  50% {
+    box-shadow: 0 0 20px #7cffe5;
+  }
+}
+
+@keyframes pulse-glow-text {
+  0%,
+  100% {
+    text-shadow: 0 0 5px rgba(0, 255, 204, 0.8), 0 0 10px rgba(0, 255, 204, 0.6),
+      0 0 20px rgba(0, 255, 204, 0.4);
+  }
+  50% {
+    text-shadow: 0 0 5px #ceffff, 0 0 10px #ceffff, 0 0 20px #ceffff;
+  }
 }
