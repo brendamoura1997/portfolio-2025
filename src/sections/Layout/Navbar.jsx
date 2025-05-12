@@ -51,11 +51,11 @@ const Navbar = () => {
         animate={{ opacity: isMounted ? 1 : 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
         className="hidden lg:flex items-center justify-center w-full clip-diagonal 
-         transition-all duration-500 elegant-font text-sm"
+         transition-all duration-500 BODY1 text-sm"
       >
         {menuItems.map((item, index) => (
           <React.Fragment key={item.target}>
-            {index > 0 && <p className="text-[#FFF]/30">|</p>}{" "}
+            {index > 0 && <p className="text-gray-300">|</p>}{" "}
             <motion.button
               onClick={() => scrollToSection(item.target)}
               initial={{ opacity: 0, x: 50 }}
@@ -68,7 +68,7 @@ const Navbar = () => {
               className="w-40 py-5 whitespace-nowrap rounded-sm cursor-pointer relative active:scale-90 transition-transform 
               duration-150 ease-in-out text-[var(--light-gray)] hover:neon-text-glow-cyan hover:text-white after:absolute 
               after:left-0 after:bottom-0 after:h-[2px] after:w-full after:opacity-0 hover:after:opacity-100 
-              after:transition-opacity after:duration-300 after:bg-gradient-to-r after:from-transparent after:via-[#00ffff] 
+              after:transition-opacity after:duration-300 after:bg-gradient-to-r after:from-transparent after:via-[var(--neon-cyan)] 
               after:to-transparent"
             >
               {item.label}
@@ -98,7 +98,7 @@ const Navbar = () => {
         animate={{ opacity: isOpen ? 1 : 0, scaleY: isOpen ? 1 : 0 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
         className={`flex flex-col absolute right-4 top-12 w-44 bg-[#010a16]/85 backdrop-blur-xl border border-[var(--light-cyan)] 
-          py-3 gap-1 text-center text-sm overflow-hidden origin-top rounded-xl elegant-font-subtitle
+          py-3 gap-1 text-center text-sm overflow-hidden origin-top rounded-xl T2
           animate-[pulse-glow-button_1.5s_ease-in-out_infinite] transition-colors duration-100`}
       >
         {menuItems.map((item, index) => (
@@ -113,7 +113,7 @@ const Navbar = () => {
              active:scale-90 transition-transform duration-150 ease-in-out"
           >
             {item.label}
-            <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#00ffff] to-transparent" />
+            <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[var(--neon-cyan)] to-transparent" />
           </motion.button>
         ))}
       </motion.div>

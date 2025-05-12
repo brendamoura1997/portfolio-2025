@@ -43,23 +43,27 @@
   --neon-cyan: #00ffff;
 
   --light-cyan: #b8ffff;
+  --light-cyan-title: #ceffff;
   --text-cyan: #cdf2f4;
   --text-gray: #c7d4d5;
 }
 
-.elegant-font {
+/******* FONTES *******/
+/* TEXTO */
+.BODY1 {
   font-family: "segoe ui variable small light", sans-serif;
 }
 
-.elegant-font-subtitle {
-  font-family: "segoe ui variable small semibol", sans-serif;
-}
-
-.my-name-font {
+/* TÍTULO */
+.T1 {
   font-family: "Palatino Linotype", serif;
 }
 
-/* Efeito Neon Text */
+.T2 {
+  font-family: "segoe ui variable small semibol", sans-serif;
+}
+
+/******* Efeito Neon Text *******/
 .neon-text {
   text-shadow: 0 0 5px rgba(200, 255, 0, 0.8), 0 0 10px rgba(200, 255, 0, 0.6),
     0 0 20px rgba(200, 255, 0, 0.4);

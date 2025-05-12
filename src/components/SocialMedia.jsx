@@ -43,8 +43,9 @@ const SocialMedia = () => (
         <img
           src={icon}
           alt={alt}
-          className="w-8 h-8 rounded-full border border-[#00ffff]/30 sm:w-8 sm:h-8 transition duration-300 
-          brightness-[0.7] hover:brightness-[2] hover:shadow-[0_0_10px_#00ffcc] hover:border-[#00ffff]"
+          className="w-8 h-8 rounded-full border border-[var(--neon-cyan)]/30 sm:w-8 sm:h-8
+          brightness-[0.7] hover:brightness-[2] hover:shadow-[0_0_10px_#00ffcc] hover:border-[var(--neon-cyan)]
+          active:scale-90 transition duration-150 ease-in-out"
         />
       </motion.a>
     ))}
