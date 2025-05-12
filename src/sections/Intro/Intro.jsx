@@ -34,7 +34,7 @@ const Intro = ({ id }) => {
     <div
       id={id}
       ref={containerRef}
-      className="relative flex flex-col pt-25 sm:pt-0 sm:justify-center bg-transparent text-white overflow-hidden min-h-screen"
+      className="relative flex flex-col pt-25 sm:pt-0 sm:justify-center bg-transparent text-white overflow-hidden min-h-screen z-20"
     >
       <video
         className="absolute inset-0 w-full h-full object-cover z-0"
@@ -70,7 +70,7 @@ const Intro = ({ id }) => {
               className="flex flex-row T2 justify-center text-sm md:text-lg w-full
            text-[var(--text-gray)] pb-6"
             >
-              Software Developer
+              Full Stack Developer
               {"\u00A0"} {"\u00A0"}
               <span> |</span>
               {"\u00A0"} {"\u00A0"}
