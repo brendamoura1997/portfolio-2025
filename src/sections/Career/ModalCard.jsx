@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import NeonButton from "../../components/ButtonNeon";
+import { motion } from "framer-motion";
 
 const ModalCard = ({
   title,
   subtitle,
   duration,
-  // ImageSrc,
   description,
   extraDetails,
   onClose,
