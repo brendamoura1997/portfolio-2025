@@ -2,7 +2,7 @@ import React from "react";
 
 const Project = (id) => {
   return (
-    <section id="projects">
+    <section id={id}>
       <div className="text-green-500">PROJECT</div>
     </section>
   );

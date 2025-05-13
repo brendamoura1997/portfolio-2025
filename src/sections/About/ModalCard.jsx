@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import { AnimatePresence } from "framer-motion";
 import NeonButton from "../../components/ButtonNeon";
 
 const ModalCard = ({

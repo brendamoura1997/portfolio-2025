@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
+import { AnimatePresence } from "framer-motion";
 import ImageCard from "../../components/ImageCard";
 import profileImage from "../../assets/images/profile2.jpg";
 import gsap from "gsap";
