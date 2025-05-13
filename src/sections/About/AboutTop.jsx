@@ -50,7 +50,7 @@ const AboutTop = () => {
       {
         opacity: 1,
         y: 0,
-        duration: 1.2,
+        duration: 1,
         ease: "power2.out",
         scrollTrigger: {
           trigger: element,
@@ -88,7 +88,7 @@ const AboutTop = () => {
             <div className="flex md:ml-5 w-full sm:pb-20 md:pb-0 ">
               <div
                 className="flex-1 flex flex-col text-sm md:text-md BODY1 text-justify leading-relaxed gap-4
-          text-[var(--light-gray)] pb-10 justify-center"
+          text-[var(--text-light-gray)]  pb-10 justify-center"
               >
                 <p>
                   Bacharel em Ciência da Computação com foco em Desenvolvimento
