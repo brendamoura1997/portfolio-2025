@@ -29,11 +29,11 @@ const About = ({ id }) => {
   return (
     <section
       id={id}
-      className="relative border-amber-300 text-white pt-15 md:pt-25 pb-5 md:pb-20 px-10 overflow-hidden"
+      className="relative text-white pt-15 md:pt-25 pb-5 md:pb-20 px-10 overflow-hidden"
     >
       <h3
         ref={headingRef}
-        className="text-3xl md:text-4xl font-bold text-[#72fc3c] pb-5 md:pb-20 ml-[-25px] md:ml-0"
+        className="text-3xl md:text-4xl T1 font-bold text-[var(--light-cyan-title)] neon-text-glow-cyan pb-10 md:pb-15 text-center"
       >
         SOBRE MIM
       </h3>

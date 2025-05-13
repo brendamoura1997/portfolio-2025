@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import linkedinIcon from "../assets/images/social-media/linkedin.png";
 import emailIcon from "../assets/images/social-media/email.png";
 import whatsappIcon from "../assets/images/social-media/whatsapp.png";
