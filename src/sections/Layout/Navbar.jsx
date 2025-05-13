@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,6 +31,7 @@ const Navbar = () => {
   const menuItems = [
     { label: "Intro", target: "intro" },
     { label: "Sobre Mim", target: "about" },
+    { label: "Carreira", target: "career" },
     { label: "Projetos", target: "projects" },
     { label: "Habilidades", target: "skills" },
     { label: "Certificados", target: "certificates" },

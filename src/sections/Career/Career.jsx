@@ -4,11 +4,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { experience } from "../../utils/experienceData";
 import { education } from "../../utils/educationData";
 import ModalCard from "./ModalCard";
-import CareerCard from "../../components/CareerCard";
+import CareerGrid from "../../components/CareerGrid";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const AboutBottom = () => {
+const Career = ({ id }) => {
   const [selectedExperience, setSelectedExperience] = useState(null);
   const [selectedEducation, setSelectedEducation] = useState(null);
   const experienceHeadingRef = useRef(null);
@@ -114,57 +114,29 @@ const AboutBottom = () => {
   }, []);
 
   return (
-    <section className="px-4 sm:px-6 md:px-10 pt-20">
+    <section className="px-4 sm:px-6 md:px-10 pt-30" id={id}>
       <h3
         ref={headingRef}
         className="text-3xl md:text-4xl T1 font-bold text-[var(--light-cyan-title)] neon-text-glow-cyan pb-5 md:pb-15 text-center"
       >
         CARREIRA
       </h3>
-      <div className="pt-10 grid grid-cols-1 md:grid-cols-2 gap-12">
-        <div>
-          <h3
-            ref={experienceHeadingRef}
-            className="text-2xl font-bold text-center sm:text-left text-[var(--neon-cyan)] T2 pb-5 md:pb-5 neon-text-glow-cyan"
-          >
-            EXPERIÊNCIA
-          </h3>
-          <div className="flex flex-col gap-6">
-            {experience.map((exp, index) => (
-              <div
-                key={index}
-                ref={(el) => (experienceCardsRef.current[index] = el)}
-              >
-                <CareerCard
-                  {...exp}
-                  onClick={() => setSelectedExperience(exp)}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
 
-        <div>
-          <h3
-            ref={educationHeadingRef}
-            className="text-2xl font-bold text-center sm:text-left text-[var(--neon-cyan)] T2 pb-5 md:pb-5 neon-text-glow-cyan"
-          >
-            FORMAÇÃO
-          </h3>
-          <div className="flex flex-col gap-6 ">
-            {education.map((edu, index) => (
-              <div
-                key={index}
-                ref={(el) => (educationCardsRef.current[index] = el)}
-              >
-                <CareerCard
-                  {...edu}
-                  onClick={() => setSelectedEducation(edu)}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+      <div className="pt-5 sm:pt-10 grid grid-cols-1 md:grid-cols-2 gap-12">
+        <CareerGrid
+          title="EXPERIÊNCIA"
+          data={experience}
+          setSelected={setSelectedExperience}
+          cardsRef={experienceCardsRef}
+          headingRef={experienceHeadingRef}
+        />
+        <CareerGrid
+          title="FORMAÇÃO"
+          data={education}
+          setSelected={setSelectedEducation}
+          cardsRef={educationCardsRef}
+          headingRef={educationHeadingRef}
+        />
       </div>
 
       {/* Modals */}
@@ -205,4 +177,4 @@ const AboutBottom = () => {
   );
 };
 
-export default AboutBottom;
+export default Career;
