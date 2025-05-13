@@ -7,6 +7,7 @@ import Footer from "./Layout/Footer";
 import Intro from "./Intro/Intro";
 import Navbar from "./Layout/Navbar";
 import bgImage from "../assets/images/global/bg09.png";
+import Career from "./Career/Career";
 
 const Body = () => {
   return (
@@ -25,6 +26,7 @@ const Body = () => {
         <div className="absolute h-[20%] inset-0 bg-gradient-to-b from-black via-black/70 to-transparent pointer-events-none" />
 
         <About id="about" />
+        <Career id="career" />
         <Project id="projects" />
         <Skill id="skills" />
         <Certificate id="certificates" />
