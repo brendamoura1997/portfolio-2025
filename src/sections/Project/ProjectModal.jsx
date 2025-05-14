@@ -179,7 +179,7 @@ const ProjectModal = ({
           {/* Explorar Mais Button */}
           {extraDetails && (
             <NeonButton
-              width="w-full text-sm md:text-md px-6 py-2 sm:w-[140px] sm:h-[45px] relative"
+              width="w-[140px] text-sm md:text-md px-6 py-2 sm:h-[45px] relative"
               paddingY="py-3"
               text={isExpanded ? "Ver menos" : "Ver mais"}
               onClick={() => setIsExpanded(!isExpanded)}

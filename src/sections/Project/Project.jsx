@@ -178,7 +178,7 @@ const Project = ({ id }) => {
           transition={{ duration: 0.5, ease: "easeInOut" }}
         >
           <NeonButton
-            width="text-sm md:text-lg px-6 sm:w-[140px] sm:h-[45px] relative border border-[var(--neon-cyan)]/70
+            width="text-lg md:text-lg px-6 sm:w-[140px] sm:h-[45px] h-5 relative border border-[var(--neon-cyan)]/70
             animate-[pulse-glow-button_1.5s_ease-in-out_infinite]"
             paddingY="pt-2 pb-10"
             text="↓"

@@ -1,18 +1,9 @@
 import React, { useRef } from "react";
-// import githubIcon from "../assets/images/social-media/github.png";
 import codeIcon from "../assets/images/social-media/code-square.png";
 import webIcon from "../assets/images/social-media/web-square.png";
 import moreIcon from "../assets/images/social-media/more.png";
 
-const ProjectCard = ({
-  title,
-  tech,
-  desc,
-  sourceLink,
-  link,
-  imageSrc,
-  onClick,
-}) => {
+const ProjectCard = ({ title, desc, sourceLink, imageSrc, onClick }) => {
   const cardRef = useRef(null);
 
   const handleMouseMove = (e) => {
@@ -39,7 +30,7 @@ const ProjectCard = ({
       ref={cardRef}
       className="relative flex flex-col justify-around w-full max-w-[28rem] h-auto bg-[#000]/20 backdrop-blur-sm px-4 pb-3 
       mb-5 rounded-xl group pt-3 hover:animate-[pulse-glow-button_1.5s_ease-in-out_infinite]
-      overflow-hidden sm:max-w-[16rem] md:max-w-[28rem] border border-transparent 
+      overflow-hidden  md:max-w-[28rem] border border-transparent 
       hover:border-[var(--neon-cyan)]/55 transition-all duration-300 
       shadow-[-0px_-0px_20px_5px_#013880] sm:shadow-[-0px_-0px_15px_5px_#013880]"
       onMouseMove={handleMouseMove}
