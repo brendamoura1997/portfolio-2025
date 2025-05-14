@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ProjectCard from "../../components/ProjectCard";
 import ProjectModal from "./ProjectModal";
 import { projectList } from "../../utils/projectData";
+import NeonButton from "../../components/ButtonNeon";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -170,14 +171,19 @@ const Project = ({ id }) => {
       <div className="relative">
         <motion.div
           ref={buttonRef}
-          onClick={handleShowAllClick}
-          className="absolute right-4 sm:right-6 md:right-10 bottom-0 flex items-center justify-center w-8 h-8 rounded-xl
-          sm:w-10 sm:h-10 border-2 border-[var(--neon-cyan)] text-[var(--neon-cyan)] text-lg sm:text-xl cursor-pointer"
+          className="absolute right-5 sm:right-5 bottom-0 flex items-center justify-center w-8 h-8
+          sm:w-10 sm:h-10 border-2 text-lg sm:text-xl cursor-pointer"
           initial={{ rotate: 0, y: 0 }}
           animate={{ rotate: showAll ? 180 : 0, y: showAll ? 50 : 0 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
         >
-          ↓
+          <NeonButton
+            width="text-sm md:text-lg px-6 sm:w-[140px] sm:h-[45px] relative border border-[var(--neon-cyan)]/70
+            animate-[pulse-glow-button_1.5s_ease-in-out_infinite]"
+            paddingY="pt-2 pb-10"
+            text="↓"
+            onClick={() => handleShowAllClick()}
+          />
         </motion.div>
       </div>
 

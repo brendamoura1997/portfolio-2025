@@ -124,6 +124,7 @@ const ProjectModal = ({
             </AnimatePresence>
           </div>
         </div>
+
         {/*  ICONS */}
         <div className="flex flex-row justify-end items-center gap-2 z-10 py-5">
           {/* CODE */}

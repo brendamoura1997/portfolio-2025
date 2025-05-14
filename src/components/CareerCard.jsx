@@ -3,7 +3,7 @@ const CareerCard = ({ title, subtitle, duration, description, onClick }) => {
     <div
       className="max-w-xl p-5 rounded-lg relative bg-[#000]/20 backdrop-blur-sm shadow-[-0px_-0px_10px_5px_#013880] 
       sm:shadow-[-0px_-0px_20px_0px_#013880] hover:animate-[pulse-glow-button_1.5s_ease-in-out_infinite] 
-      border-[0.5px] border-transparent hover:border-[var(--light-cyan)] transition-all cursor-pointer "
+      border-[0.5px] border-transparent hover:border-[var(--light-cyan)]/55 transition-all cursor-pointer "
       onClick={onClick}
     >
       <div className="flex flex-wrap justify-between items-center gap-2">
