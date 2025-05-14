@@ -103,7 +103,9 @@ const About = ({ id }) => {
           transition={{ duration: 0.2, ease: "easeInOut" }}
           className={`md:p-4 h-auto md:h-80 bg-[#000]/20 backdrop-blur-sm transition-all duration-500 relative rounded-lg flex
           flex-col md:flex-row mx-auto ${showMore ? "tablet-expand" : ""}
-            ${clipActive ? "clip-diagonal-top-right" : ""}`}
+            ${clipActive ? "clip-diagonal-top-right" : ""}
+            border border-[var(--neon-cyan)]/70
+            animate-[pulse-glow-about_3.0s_ease-in-out_infinite]`}
         >
           {isMounted ? (
             <>
