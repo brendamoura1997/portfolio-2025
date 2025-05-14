@@ -15,7 +15,7 @@ const CareerCard = ({ title, subtitle, duration, description, onClick }) => {
       <p className="text-gray-500 text-xs italic whitespace-normal">
         {duration}
       </p>
-      <p className="mt-2 text-[var(--text-light-gray)] BODY1 text-justify break-words">
+      <p className="mt-2 text-[var(--text-light-gray)] BODY1 text-justify break-words text-sm md:text-md leading-relaxed">
         {description}
       </p>
     </div>
