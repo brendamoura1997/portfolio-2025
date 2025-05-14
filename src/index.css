@@ -248,6 +248,16 @@
   );
 }
 
+@keyframes pulse-glow-about {
+  0%,
+  100% {
+    box-shadow: 0 0 15px #066da9;
+  }
+  50% {
+    box-shadow: 0 0 30px #1b71e1;
+  }
+}
+
 @keyframes pulse-glow-button {
   0%,
   100% {
