@@ -90,9 +90,9 @@ const Intro = ({ id }) => {
               <NeonButton
                 width="w-full md:w-52 text-sm md:text-md"
                 paddingY="py-3"
-                text="Ver projetos"
+                text="Ver Carreira"
                 onClick={() => {
-                  const section = document.getElementById("projects");
+                  const section = document.getElementById("career");
                   section?.scrollIntoView({ behavior: "smooth" });
                 }}
               />
