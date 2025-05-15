@@ -90,9 +90,9 @@ const Intro = ({ id }) => {
               <NeonButton
                 width="w-full md:w-52 text-sm md:text-md"
                 paddingY="py-3"
-                text="Ver projetos"
+                text="Ver Carreira"
                 onClick={() => {
-                  const section = document.getElementById("projects");
+                  const section = document.getElementById("career");
                   section?.scrollIntoView({ behavior: "smooth" });
                 }}
               />
@@ -111,7 +111,10 @@ const Intro = ({ id }) => {
                 }}
               />
             </div>
-            <SocialMedia />
+            <SocialMedia
+              addClassName={" w-8 h-8 sm:w-8 sm:h-8 brightness-[0.7]"}
+              gap={"gap-5"}
+            />
           </div>
         </div>
       </div>

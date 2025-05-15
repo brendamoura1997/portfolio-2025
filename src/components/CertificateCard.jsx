@@ -1,6 +1,4 @@
 import React, { useRef } from "react";
-import codeIcon from "../assets/images/social-media/code-square.png";
-import webIcon from "../assets/images/social-media/web-square.png";
 import moreIcon from "../assets/images/social-media/more.png";
 
 const CertificateCard = ({ title, issuer, date, imageSrc, onClick }) => {
