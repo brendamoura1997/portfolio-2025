@@ -3,7 +3,7 @@ import { AnimatePresence } from "framer-motion";
 import NeonButton from "../../components/ButtonNeon";
 import { motion } from "framer-motion";
 
-const ModalCard = ({
+const CarrerModal = ({
   title,
   subtitle,
   duration,
@@ -90,4 +90,4 @@ const ModalCard = ({
   );
 };
 
-export default ModalCard;
+export default CarrerModal;
