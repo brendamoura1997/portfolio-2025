@@ -166,7 +166,7 @@ const Career = ({ id }) => {
             onClick={(e) => e.stopPropagation()}
             className="relative max-w-[90%] md:max-w-[70%]"
           >
-            <ModalCard
+            <CarrerModal
               {...selectedEducation}
               onClose={() => setSelectedEducation(null)}
             />
