@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import githubIcon from "../../assets/images/social-media/github.png";
 import codeIcon from "../../assets/images/social-media/code-square.png";
 import webIcon from "../../assets/images/social-media/web-square.png";
 import NeonButton from "../../components/ButtonNeon";
