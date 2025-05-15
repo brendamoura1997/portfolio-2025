@@ -1,22 +1,3 @@
-const certificate = import.meta.glob("/src/assets/images/docs/*.jpg", {
-  eager: true,
-});
-
-const getCertificate = (certificateImage) => {
-  const formattedName = certificateImage.replace(/\s+/g, "-").toLowerCase();
-  const certificatePath = `/src/assets/images/docs/${formattedName}.jpg`;
-
-  // console.log("Searching for:", certificatePath);
-  // console.log("Available keys:", Object.keys(certificate));
-
-  if (!certificate[certificatePath]) {
-    console.error(`Certificate image not found: ${certificateImage}`);
-    return certificate["/src/assets/images/docs/fallback.jpg"]?.default;
-  }
-
-  return certificate[certificatePath].default;
-};
-
 export const experience = [
   {
     title: "Fullstack Developer",
@@ -49,7 +30,6 @@ export const experience = [
     title: "Projeto de Pesquisa Científica",
     subtitle: "Instituto Federal Catarinense",
     duration: "08/2020 - 01/2021",
-    ImageSrc: getCertificate("computer-science"),
     description:
       "Durante o Projeto de Pesquisa no Instituto Federal Catarinense, atuei na documentação técnica e no desenvolvimento frontend de sistemas, contribuindo para a organização e clareza do projeto.",
     extraDetails: [
