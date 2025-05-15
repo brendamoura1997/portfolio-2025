@@ -32,10 +32,10 @@ const Navbar = () => {
     { label: "Intro", target: "intro" },
     { label: "Sobre Mim", target: "about" },
     { label: "Carreira", target: "career" },
-    { label: "Projetos", target: "projects" },
+    // { label: "Projetos", target: "projects" },
     { label: "Habilidades", target: "skills" },
     { label: "Certificados", target: "certificates" },
-    { label: "Contato", target: "contact" },
+    // { label: "Contato", target: "contact" },
   ];
 
   return (

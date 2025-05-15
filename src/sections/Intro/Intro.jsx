@@ -111,7 +111,10 @@ const Intro = ({ id }) => {
                 }}
               />
             </div>
-            <SocialMedia />
+            <SocialMedia
+              addClassName={" w-8 h-8 sm:w-8 sm:h-8 brightness-[0.7]"}
+              gap={"gap-5"}
+            />
           </div>
         </div>
       </div>

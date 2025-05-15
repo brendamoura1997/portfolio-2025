@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const socialLinks = [
   {
-    href: "https://www.linkedin.com/in/BRENDA",
+    href: "https://www.linkedin.com/in/brenda-moura-ti",
     icon: linkedinIcon,
     alt: "LinkedIn",
   },
@@ -19,8 +19,8 @@ const socialLinks = [
   },
 ];
 
-const SocialMedia = () => (
-  <div className="flex justify-center gap-5 mt-10 flex-wrap">
+const SocialMedia = ({ addClassName, gap }) => (
+  <div className={`flex justify-center ${gap} mt-10 flex-wrap`}>
     {socialLinks.map(({ href, icon, alt }, index) => (
       <motion.a
         key={alt}
@@ -43,9 +43,9 @@ const SocialMedia = () => (
         <img
           src={icon}
           alt={alt}
-          className="w-8 h-8 rounded-full border border-[var(--neon-cyan)]/30 sm:w-8 sm:h-8
-          brightness-[0.7] hover:brightness-[2] hover:shadow-[0_0_10px_#00ffcc] hover:border-[var(--neon-cyan)]
-          active:scale-90 transition duration-150 ease-in-out"
+          className={` ${addClassName} rounded-full border border-[var(--neon-cyan)]/30 
+           hover:brightness-[2] hover:shadow-[0_0_10px_#00ffcc] hover:border-[var(--neon-cyan)]
+          active:scale-90 transition duration-150 ease-in-out`}
         />
       </motion.a>
     ))}
