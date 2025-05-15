@@ -49,6 +49,13 @@
   --text-light-gray: #e5e7eb;
 
   --bg-dark-cyber: #0b090a;
+
+  --basic-level: #ffbf00;
+  --title-basic-level: #ffeebd;
+  --medium-level: #00ff00;
+  --title-medium-level: #b8ffba;
+  --advanced-level: #00ffff;
+  --title-advanced-level: #b8ffff;
 }
 
 /******* FONTES *******/
@@ -276,5 +283,156 @@
   }
   50% {
     text-shadow: 0 0 5px #ceffff, 0 0 10px #ceffff, 0 0 20px #ceffff;
+  }
+}
+
+/* ====================================== */
+
+/* Barra de Progresso Glow Animation */
+@keyframes progress-glow {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.animate-progress-glow {
+  animation: progress-glow 1.5s infinite;
+}
+
+@keyframes glow {
+  0% {
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: none;
+  }
+  100% {
+    background: var(--bgColor);
+    box-shadow: 0 0 10px var(--bgColor);
+  }
+}
+
+.points {
+  animation: glow 0.04s linear forwards;
+}
+
+/* Floating Particles Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-20px) translateX(20px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+.animate-float {
+  animation: float infinite ease-in-out;
+}
+
+/* Neon Line Animation */
+@keyframes neon-line {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-neon-line {
+  background: linear-gradient(90deg, #00ffcc, #67f82e, #00ffcc);
+  background-size: 200% 200%;
+  animation: neon-line 3s linear infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+/* Base Skill Border */
+.skill-border {
+  position: relative;
+  background: transparent;
+  border: 3px dotted rgba(0, 255, 255, 0.4);
+  border-radius: 100%;
+  /* border-radius: 10%; */
+  transition: border-color 0.3s ease-in-out;
+}
+
+.skill-border:hover {
+  border-color: var(--neon-cyan);
+}
+
+/* Efeitos Holograficos */
+.holo-glitch {
+  animation: hologram 0.7s linear infinite alternate;
+  filter: drop-shadow(0 0 8px #00ffcc);
+}
+
+@keyframes hologram {
+  0% {
+    transform: scale(1) skewX(0deg);
+    opacity: 0.8;
+  }
+  25% {
+    transform: scale(1.02) skewX(-5deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1) skewX(0deg);
+    opacity: 0.9;
+  }
+  75% {
+    transform: scale(1.02) skewX(5deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) skewX(0deg);
+    opacity: 0.8;
+  }
+}
+
+.holo-ring {
+  animation: energyPulse 1s ease-in-out infinite alternate;
+  box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 40px #00ffcc;
+}
+
+@keyframes energyPulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 1;
   }
 }
