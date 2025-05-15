@@ -9,29 +9,13 @@ const ProjectModal = ({
   title,
   tech,
   desc,
-  link,
   sourceLink,
   imageSrc,
   extraDetails,
   onClose,
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const [hideIcons, setHideIcons] = useState(false);
   const scrollableRef = useRef(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (scrollableRef.current) {
-        setHideIcons(scrollableRef.current.scrollTop > 10);
-      }
-    };
-
-    const scrollElement = scrollableRef.current;
-    if (scrollElement) {
-      scrollElement.addEventListener("scroll", handleScroll);
-      return () => scrollElement.removeEventListener("scroll", handleScroll);
-    }
-  }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => setIsExpanded(true), 600);
