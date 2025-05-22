@@ -2,7 +2,7 @@ import About from "./About/About";
 // import Project from "./Project/Project";
 import Skill from "./Skill/Skill";
 import Certificate from "./Certificate/Certificate";
-// import Contact from "./Contact/Contact";
+import Contact from "./Contact/Contact";
 import Footer from "./Layout/Footer";
 import Intro from "./Intro/Intro";
 import Navbar from "./Layout/Navbar";
@@ -30,7 +30,7 @@ const Body = () => {
         {/* <Project id="projects" /> */}
         <Skill id="skills" />
         <Certificate id="certificates" />
-        {/* <Contact id="contact" /> */}
+        <Contact id="contact" />
       </div>
 
       <Footer />
