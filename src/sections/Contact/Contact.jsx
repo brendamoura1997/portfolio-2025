@@ -46,14 +46,11 @@ const Contact = ({ id }) => {
   }, []);
 
   return (
-    <section
-      id={id}
-      className="text-white pt-15 md:pt-25 pb-10 md:pb-28 px-6 sm:px-10 relative overflow-hidden"
-    >
+    <section id={id} className="px-4 sm:px-6 md:px-10 pt-30 pb-30">
       {/* Section Heading */}
       <h3
         ref={headingRef}
-        className="text-3xl md:text-4xl T1 font-bold text-[var(--light-cyan-title)] neon-text-glow-cyan pb-5 md:pb-15 text-center"
+        className="text-3xl md:text-4xl T1 font-bold text-[var(--light-cyan-title)] neon-text-glow-cyan pb-10 lg:pb-15 text-center"
       >
         CONTATO
       </h3>
