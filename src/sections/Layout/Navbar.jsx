@@ -35,7 +35,7 @@ const Navbar = () => {
     // { label: "Projetos", target: "projects" },
     { label: "Habilidades", target: "skills" },
     { label: "Certificados", target: "certificates" },
-    // { label: "Contato", target: "contact" },
+    { label: "Contato", target: "contact" },
   ];
 
   return (
