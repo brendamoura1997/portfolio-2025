@@ -101,7 +101,8 @@ const Footer = () => {
                 />
               ) : null}
               <p className="T2 text-[var(--neon-cyan)]/80 font-semibold text-md">
-                Contato
+                {/* Contato */}
+                Informações Pessoais
               </p>
             </div>
 
