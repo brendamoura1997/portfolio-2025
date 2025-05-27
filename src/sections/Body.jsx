@@ -34,6 +34,15 @@ const Body = () => {
       </div>
 
       <Footer />
+
+      <p className="text-[var(--light-gray)]/70 text-sm T2 text-center relative h-10 flex justify-center items-center">
+        © 2025 BRENDA MOURA | All Rights Reserved.
+      </p>
+      {/* Neon Line */}
+      <span
+        className="relative bottom-0 left-1/2 w-full h-[1px] -translate-x-1/2 bg-gradient-to-r from-transparent 
+    via-[#00ffff] to-transparent opacity-100 hover:via-[#b8ffff]"
+      />
     </div>
   );
 };

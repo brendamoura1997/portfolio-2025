@@ -112,8 +112,9 @@ const Intro = ({ id }) => {
               />
             </div>
             <SocialMedia
+              addClassNameDiv={"gap-5 justify-center mt-10 flex-wrap"}
               addClassName={" w-8 h-8 sm:w-8 sm:h-8 brightness-[0.7]"}
-              gap={"gap-5"}
+              showLabel={false}
             />
           </div>
         </div>
