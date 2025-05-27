@@ -5,13 +5,15 @@ import githubIcon from "../assets/images/social-media/github.png";
 import { motion } from "framer-motion";
 
 const socialLinks = [
+  { href: "https://wa.me/+5511943000131", icon: whatsappIcon, alt: "WhatsApp" },
+
+  { href: "mailto:brendamoura857@gmail.com", icon: emailIcon, alt: "Email" },
   {
     href: "https://www.linkedin.com/in/brenda-moura-ti",
     icon: linkedinIcon,
     alt: "LinkedIn",
   },
-  { href: "mailto:brendamoura857@gmail.com", icon: emailIcon, alt: "Email" },
-  { href: "https://wa.me/+5511943000131", icon: whatsappIcon, alt: "WhatsApp" },
+
   {
     href: "https://github.com/brendamoura1997",
     icon: githubIcon,
