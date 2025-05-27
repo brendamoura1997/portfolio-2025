@@ -46,17 +46,17 @@ const Footer = () => {
   return (
     <footer
       ref={footerRef}
-      className="text-white w-full h-auto bg-[#011b3d]/50 backdrop-blur-sm shadow-[0px_-20px_30px_5px_#001530]
+      className="text-white w-full h-auto bg-[#000]/50 backdrop-blur-sm shadow-[0px_-20px_30px_5px_#09090d]
       overflow-hidden flex md:justify-center"
     >
       <img
         src={bgImage}
         alt="bg"
-        className="absolute inset-0 w-full h-full object-cover z-[-5]"
+        className="absolute inset-0 w-full h-full object-cover z-[0]"
       />
       <div
-        className="w-full h-full bg-gradient-to-t from-[#060608]/80 to-[#00132b]/70 
-      opacity-100 py-10 md:py-20"
+        className="w-full h-full bg-gradient-to-t from-[#00132b]/80 to-[#060608]/70 
+      opacity-100 py-10 md:py-20 z-[1]"
       >
         {/* Footer Content */}
         <div
@@ -106,7 +106,7 @@ const Footer = () => {
             </div>
 
             <div
-              className="flex justify-start gap-1 cursor-text relative
+              className="flex justify-start gap-1 cursor-default relative
             active:scale-90 transition duration-150 ease-in-out group"
               title="Clique para copiar"
               onClick={() => handleCopy("11 94300-0131")}
@@ -136,7 +136,7 @@ const Footer = () => {
             </div>
 
             <div
-              className="flex justify-start gap-1 cursor-text relative
+              className="flex justify-start gap-1 cursor-default relative
   active:scale-90 transition duration-150 ease-in-out group"
               title="Clique para copiar"
               onClick={() => handleCopy("brendamoura857@gmail.com")}
@@ -165,7 +165,7 @@ const Footer = () => {
             </div>
 
             <div
-              className="flex justify-start gap-1 cursor-text relative
+              className="flex justify-start gap-1 cursor-default relative
   active:scale-90 transition duration-150 ease-in-out group"
               title="Clique para copiar"
               onClick={() => handleCopy("Barueri, São Paulo")}
@@ -207,7 +207,7 @@ const Footer = () => {
               {isMobile ? (
                 <span
                   className="relative top-7 md:top-[1.8rem] left-0 w-full h-[2px] bg-gradient-to-r from-[#00ffff]/70 
-          to-transparent opacity-100"
+        to-transparent opacity-100"
                 />
               ) : null}
 
@@ -215,38 +215,51 @@ const Footer = () => {
                 Disponibilidade
               </p>
             </div>
-            <div className="flex flex-row justify-start md:justify-center items-center gap-1">
+
+            {/* LINHA 1 */}
+            <div className="flex justify-start md:justify-center items-center gap-1 cursor-default relative group">
               <img
                 src={play}
-                alt="local"
-                title="Ver código fonte"
-                className="w-5 h-auto md:w-4 md:h-auto opacity-90"
+                alt="CLT ou PJ"
+                title="CLT ou PJ"
+                className="w-5 h-auto md:w-4 md:h-auto opacity-90 transition group-hover:brightness-[2] group-hover:opacity-100"
               />
-              <p className="text-[var(--neon-cyan)]/75 BODY1 font-bold text-sm">
+              <p
+                className="text-[var(--neon-cyan)]/75 BODY1 font-bold text-sm transition 
+      group-hover:text-[var(--light-cyan-title)] group-hover:drop-shadow-[0_0_6px_#00ffcc]"
+              >
                 Disponível para CLT ou PJ
               </p>
             </div>
 
-            <div className="flex flex-row justify-start md:justify-center items-center gap-1">
+            {/* LINHA 2 */}
+            <div className="flex justify-start md:justify-center items-center gap-1 cursor-default relative group">
               <img
                 src={play}
-                alt="local"
-                title="Ver código fonte"
-                className="w-5 h-auto md:w-4 md:h-auto opacity-90"
+                alt="Remoto"
+                title="Remoto"
+                className="w-5 h-auto md:w-4 md:h-auto opacity-90 transition group-hover:brightness-[2] group-hover:opacity-100"
               />
-              <p className="text-[var(--neon-cyan)]/75 font-bold BODY1 text-sm">
+              <p
+                className="text-[var(--neon-cyan)]/75 BODY1 font-bold text-sm transition 
+      group-hover:text-[var(--light-cyan-title)] group-hover:drop-shadow-[0_0_6px_#00ffcc]"
+              >
                 Apenas remoto
               </p>
             </div>
 
-            <div className="flex flex-row justify-start md:justify-center items-center gap-1">
+            {/* LINHA 3 */}
+            <div className="flex justify-start md:justify-center items-center gap-1 cursor-default relative group">
               <img
                 src={play}
-                alt="local"
-                title="Ver código fonte"
-                className="w-5 h-auto md:w-4 md:h-auto opacity-90"
+                alt="Horário"
+                title="Horário"
+                className="w-5 h-auto md:w-4 md:h-auto opacity-90 transition group-hover:brightness-[2] group-hover:opacity-100"
               />
-              <p className="text-[var(--neon-cyan)]/75 font-bold BODY1 text-sm">
+              <p
+                className="text-[var(--neon-cyan)]/75 BODY1 font-bold text-sm transition 
+      group-hover:text-[var(--light-cyan-title)] group-hover:drop-shadow-[0_0_6px_#00ffcc]"
+              >
                 Horário e valores à combinar
               </p>
             </div>
