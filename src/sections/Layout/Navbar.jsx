@@ -79,8 +79,8 @@ const Navbar = () => {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: isMounted ? 1 : 0, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="fixed top-0 z-50 w-full bg-[#010a16]/50 backdrop-blur-3xl flex justify-end lg:justify-center px-4 
-      shadow-[0_10px_15px_rgba(1,10,22,0.7)]"
+      className="fixed top-0 z-50 w-full bg-[#090d14]/65 backdrop-blur-3xl flex justify-end lg:justify-center px-4 
+      shadow-[0_10px_15px_rgba(1,10,22,0.9)]"
     >
       {/* Desktop Navbar */}
       <motion.div
@@ -135,9 +135,9 @@ const Navbar = () => {
         initial={{ opacity: 0, scaleY: 0 }}
         animate={{ opacity: isOpen ? 1 : 0, scaleY: isOpen ? 1 : 0 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
-        className={`flex flex-col absolute right-4 top-12 w-44 bg-[#010a16]/85 backdrop-blur-xl border border-[var(--light-cyan)] 
+        className={`flex flex-col absolute right-4 top-12 w-44 bg-[#050d1a]/90 backdrop-blur-xl border border-[var(--light-cyan)] 
           py-3 gap-1 text-center text-sm overflow-hidden origin-top rounded-xl T2
-          animate-[pulse-glow-button_1.5s_ease-in-out_infinite] transition-colors duration-100`}
+          animate-[pulse-glow-button_2.5s_ease-in-out_infinite] transition-colors duration-100`}
       >
         {menuItems.map((item, index) => (
           <motion.button
@@ -151,10 +151,8 @@ const Navbar = () => {
              active:scale-90 transition-transform duration-150 ease-in-out"
           >
             {item.label}
-            {activeSection === item.target &&
-              (item.target !== "intro" || hasInteracted.current) && (
-                <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[var(--neon-cyan)] to-transparent" />
-              )}
+
+            <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[var(--neon-cyan)] to-transparent" />
           </motion.button>
         ))}
       </motion.div>
