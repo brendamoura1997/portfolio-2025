@@ -19,7 +19,7 @@ export const projectList = [
     tech: "React, Tailwind CSS, Framer Motion",
     desc: "Cyberpunk-inspired personal portfolio with a one-page scrolling layout using React, Tailwind CSS, and Framer Motion",
     extraDetails:
-      "A futuristic, neon-lit portfolio showcasing AI, ML, and full-stack projects with glitch effects, parallax scrolling, and immersive interactions. The website features: Glitch effects and animated section transitions for a dynamic user experience. Parallax scrolling and interactive hover effects to enhance visual depth. Custom background music toggle with sci-fi sound effects. Optimized for responsiveness across mobile and desktop while preserving the cyberpunk aesthetic.",
+      "A futuristic, neon-lit portfolio showcasing AI, ML, and full stack projects with glitch effects, parallax scrolling, and immersive interactions. The website features: Glitch effects and animated section transitions for a dynamic user experience. Parallax scrolling and interactive hover effects to enhance visual depth. Custom background music toggle with sci-fi sound effects. Optimized for responsiveness across mobile and desktop while preserving the cyberpunk aesthetic.",
     sourceLink: "https://github.com/brendamoura1997",
     link: "https://github.com/brendamoura1997",
     imageSrc: getBanner("portfolio"),

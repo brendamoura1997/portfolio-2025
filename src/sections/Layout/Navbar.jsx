@@ -5,6 +5,9 @@ import { motion } from "framer-motion";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+  const [activeSection, setActiveSection] = useState(null);
+  const hasInteracted = useRef(false);
+
   const menuRef = useRef(null);
 
   useEffect(() => {
@@ -22,6 +25,7 @@ const Navbar = () => {
   }, []);
 
   const scrollToSection = (sectionId) => {
+    hasInteracted.current = true;
     document
       .getElementById(sectionId)
       ?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -38,13 +42,45 @@ const Navbar = () => {
     { label: "Contato", target: "contact" },
   ];
 
+  useEffect(() => {
+    const sectionIds = menuItems.map((item) => item.target);
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.6,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          if (entry.target.id !== "intro") {
+            hasInteracted.current = true;
+          }
+          setActiveSection(entry.target.id);
+        }
+      });
+    }, observerOptions);
+
+    sectionIds.forEach((id) => {
+      const section = document.getElementById(id);
+      if (section) observer.observe(section);
+    });
+
+    return () => {
+      sectionIds.forEach((id) => {
+        const section = document.getElementById(id);
+        if (section) observer.unobserve(section);
+      });
+    };
+  }, []);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: isMounted ? 1 : 0, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="fixed top-0 z-50 w-full bg-[#010a16]/50 backdrop-blur-3xl flex justify-end lg:justify-center px-4 
-      shadow-[0_10px_15px_rgba(1,10,22,0.7)]"
+      className="fixed top-0 z-50 w-full bg-[#090d14]/65 backdrop-blur-3xl flex justify-end lg:justify-center px-4 
+      shadow-[0_10px_15px_rgba(1,10,22,0.9)]"
     >
       {/* Desktop Navbar */}
       <motion.div
@@ -66,13 +102,14 @@ const Navbar = () => {
                 delay: isMounted ? index * 0.2 : 0,
                 ease: "easeOut",
               }}
-              className="w-40 py-5 whitespace-nowrap rounded-sm cursor-pointer relative active:scale-90 transition-transform 
-              duration-150 ease-in-out text-[var(--light-gray)] hover:neon-text-glow-cyan hover:text-white after:absolute 
-              after:left-0 after:bottom-0 after:h-[2px] after:w-full after:opacity-0 hover:after:opacity-100 
-              after:transition-opacity after:duration-300 after:bg-gradient-to-r after:from-transparent after:via-[var(--neon-cyan)] 
-              after:to-transparent"
+              className={`w-40 py-5 whitespace-nowrap rounded-sm cursor-pointer relative active:scale-90 transition-transform 
+    duration-150 ease-in-out text-[var(--light-gray)] hover:neon-text-glow-cyan hover:text-white`}
             >
               {item.label}
+              {activeSection === item.target &&
+                (item.target !== "intro" || hasInteracted.current) && (
+                  <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[var(--neon-cyan)] to-transparent" />
+                )}
             </motion.button>
           </React.Fragment>
         ))}
@@ -98,9 +135,9 @@ const Navbar = () => {
         initial={{ opacity: 0, scaleY: 0 }}
         animate={{ opacity: isOpen ? 1 : 0, scaleY: isOpen ? 1 : 0 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
-        className={`flex flex-col absolute right-4 top-12 w-44 bg-[#010a16]/85 backdrop-blur-xl border border-[var(--light-cyan)] 
+        className={`flex flex-col absolute right-4 top-12 w-44 bg-[#050d1a]/90 backdrop-blur-xl border border-[var(--light-cyan)] 
           py-3 gap-1 text-center text-sm overflow-hidden origin-top rounded-xl T2
-          animate-[pulse-glow-button_1.5s_ease-in-out_infinite] transition-colors duration-100`}
+          animate-[pulse-glow-button_2.5s_ease-in-out_infinite] transition-colors duration-100`}
       >
         {menuItems.map((item, index) => (
           <motion.button
@@ -114,6 +151,7 @@ const Navbar = () => {
              active:scale-90 transition-transform duration-150 ease-in-out"
           >
             {item.label}
+
             <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[var(--neon-cyan)] to-transparent" />
           </motion.button>
         ))}

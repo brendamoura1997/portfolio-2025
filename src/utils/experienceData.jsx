@@ -1,10 +1,10 @@
 export const experience = [
   {
-    title: "Fullstack Developer",
+    title: "Full Stack Developer",
     subtitle: "Innovation Servicos Digitais Ltda",
     duration: "10/2022 - 07/2024",
     description:
-      "Como Desenvolvedora Fullstack, liderei a implementação de interfaces completas em aplicações web, garantindo alta qualidade no frontend e integração eficiente com APIs.",
+      "Como Desenvolvedora Full Stack, liderei a implementação de interfaces completas em aplicações web, garantindo alta qualidade no frontend e integração eficiente com APIs.",
     extraDetails: [
       "Implementei a comunicação entre frontend e backend através de APIs REST, conectando e consumindo endpoints com eficiência.",
       "Desenvolvi interfaces responsivas e dinâmicas utilizando React.js, Typescript e Redux, desde o design inicial até o deploy final da aplicação",

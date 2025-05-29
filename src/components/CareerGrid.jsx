@@ -1,10 +1,11 @@
 import CareerCard from "./CareerCard";
 const CareerGrid = ({ title, data, setSelected, cardsRef, headingRef }) => {
   return (
-    <div>
+    <div className="">
       <h3
         ref={headingRef}
-        className="text-2xl font-bold text-center sm:text-left text-[var(--neon-cyan)] T2 pb-5 md:pb-5 neon-text-glow-cyan"
+        className="text-2xl font-bold text-center sm:text-left text-[var(--neon-cyan)] T2 pb-5 md:pb-5 
+        neon-text-glow-cyan"
       >
         {title}
       </h3>
