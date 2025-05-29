@@ -12,7 +12,7 @@ const CertificateModal = ({ title, issuer, date, imageSrc, onClose }) => {
     >
       <motion.div
         onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
-        className="relative px-6 md:px-8 pt-8 md:pt-6 max-w-4xl w-full max-h-[80vh] bg-[#00132b]/50 backdrop-blur-lg
+        className="relative px-6 md:px-8 pt-8 md:pt-6 max-w-4xl w-full max-h-[80vh] bg-[#090d14]/50 backdrop-blur-lg
          text-white rounded-lg shadow-[-0px_-0px_20px_5px_#013880] sm:shadow-[-0px_-0px_20px_0px_#013880] 
            animate-[pulse-glow-about_3.0s_ease-in-out_infinite] hover:animate-[pulse-glow-button_3.0s_ease-in-out_infinite]
            transition-all duration-300 flex flex-col"
@@ -26,7 +26,7 @@ const CertificateModal = ({ title, issuer, date, imageSrc, onClose }) => {
           onClick={onClose}
           className="absolute sm:text-2xl top-1 right-2 text-[var(--neon-cyan)] hover:neon-text-glow-cyan transition-all 
           duration-300 cursor-pointer bg-black/100 backdrop-blur-lg rounded-full w-10 h-10
-           hover:animate-[pulse-glow-button_1.5s_ease-in-out_infinite] border-[0.5px] border-[var(--light-cyan)]/50"
+           hover:animate-[pulse-glow-button_1.5s_ease-in-out_infinite] "
         >
           ✕
         </button>

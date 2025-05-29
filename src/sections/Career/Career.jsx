@@ -145,7 +145,7 @@ const Career = ({ id }) => {
       {/* Modals */}
       {selectedExperience && (
         <div
-          className="fixed inset-0 flex items-center justify-center bg-[#00132b]/20 backdrop-blur-lg z-50"
+          className="fixed inset-0 flex items-center justify-center bg-[#080e17]/70 backdrop-blur-lg z-50"
           onClick={() => setSelectedExperience(null)}
         >
           <div
@@ -162,7 +162,7 @@ const Career = ({ id }) => {
 
       {selectedEducation && (
         <div
-          className="fixed inset-0 flex items-center justify-center bg-[#00132b]/20 backdrop-blur-lg z-50"
+          className="fixed inset-0 flex items-center justify-center bg-[#080e17]/70 backdrop-blur-lg z-50"
           onClick={() => setSelectedEducation(null)}
         >
           <div

@@ -11,7 +11,7 @@ const CarrerModal = ({
   extraDetails,
   onClose,
 }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(true);
 
   return (
     <motion.div
@@ -23,7 +23,7 @@ const CarrerModal = ({
     >
       <motion.div
         onClick={(e) => e.stopPropagation()}
-        className="relative bg-[#000914]/80 backdrop-blur-sm text-white rounded-lg w-full max-w-5xl max-h-[90vh] flex flex-col
+        className="relative bg-[#090d14]/80 backdrop-blur-sm text-white rounded-lg w-full max-w-5xl max-h-[90vh] flex flex-col
                    shadow-[-0px_-0px_20px_5px_#013880] sm:shadow-[-0px_-0px_20px_0px_#013880] 
                    animate-[pulse-glow-about_3.0s_ease-in-out_infinite]  hover:animate-[pulse-glow-button_3.0s_ease-in-out_infinite]
                    transition-all duration-300"
@@ -63,8 +63,8 @@ const CarrerModal = ({
                   animate={{ height: "auto", opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="text-justify text-gray-300 leading-relaxed list-disc pl-7 font-bold text-md mt-4 bg-[#222] p-4 
-                rounded-lg overflow-hidden"
+                  className="text-justify text-gray-300 leading-relaxed list-disc pl-7 font-semibold text-md mt-4 
+                  bg-[#FFF]/10 p-4 rounded-lg overflow-hidden"
                 >
                   {extraDetails.map((detail, index) => (
                     <li key={index}>{detail}</li>

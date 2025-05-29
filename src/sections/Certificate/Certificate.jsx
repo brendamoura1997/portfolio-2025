@@ -125,7 +125,7 @@ const Certificate = ({ id }) => {
 
       {selectedCertificate && (
         <div
-          className="fixed inset-0 flex items-center justify-center z-[9999] p-2 sm:p-4 bg-[#020912]/80 backdrop-blur-lg"
+          className="fixed inset-0 flex items-center justify-center z-[9999] p-2 sm:p-4 bg-[#050d1a]/80 backdrop-blur-lg"
           onClick={() => setSelectedCertificate(null)}
         >
           <div onClick={(e) => e.stopPropagation()} className="relative">
