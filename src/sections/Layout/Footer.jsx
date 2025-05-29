@@ -115,11 +115,11 @@ const Footer = () => {
                 src={phone}
                 alt="telephone"
                 title="Clique para copiar"
-                className="w-5 h-auto md:w-6 md:h-auto opacity-80 group-hover:brightness-[2] group-hover:opacity-100 
+                className="w-5 h-auto md:w-6 md:h-auto opacity-70 group-hover:brightness-[2] group-hover:opacity-100 
               active:scale-90 transition duration-150 ease-in-out"
               />
               <p
-                className="text-[var(--neon-cyan)]/75 BODY1 font-bold text-sm transition duration-150 ease-in-out
+                className="text-[var(--text-footer-cyan)]/75 BODY1 font-bold text-sm transition duration-150 ease-in-out
            group-hover:text-[var(--light-cyan-title)] group-hover:drop-shadow-[0_0_6px_#00ffcc]"
               >
                 11 94300-0131
@@ -145,11 +145,11 @@ const Footer = () => {
                 src={email}
                 alt="email"
                 title="Clique para copiar"
-                className="w-5 h-auto sm:w-6 sm:h-auto opacity-80 rounded-full 
+                className="w-5 h-auto sm:w-6 sm:h-auto opacity-70 rounded-full 
     group-hover:brightness-[2] group-hover:opacity-100 active:scale-90 transition duration-150 ease-in-out"
               />
               <p
-                className="text-[var(--neon-cyan)]/75 BODY1 font-bold text-sm pb-[0.15rem] 
+                className="text-[var(--text-footer-cyan)]/75 BODY1 font-bold text-sm pb-[0.15rem] 
      group-hover:text-[var(--light-cyan-title)] group-hover:drop-shadow-[0_0_6px_#00ffcc] transition"
               >
                 brendamoura857@gmail.com
@@ -174,11 +174,11 @@ const Footer = () => {
                 src={local}
                 alt="local"
                 title="Clique para copiar"
-                className="w-5 h-auto md:w-6 md:h-auto opacity-80 
+                className="w-5 h-auto md:w-6 md:h-auto opacity-70 
     group-hover:brightness-[2] group-hover:opacity-100 active:scale-90 transition duration-150 ease-in-out"
               />
               <p
-                className="text-[var(--neon-cyan)]/75 BODY1 font-bold text-sm 
+                className="text-[var(--text-footer-cyan)]/75 BODY1 font-bold text-sm 
      group-hover:text-[var(--light-cyan-title)] group-hover:drop-shadow-[0_0_6px_#00ffcc] transition"
               >
                 Barueri, São Paulo
@@ -222,10 +222,10 @@ const Footer = () => {
                 src={play}
                 alt="CLT ou PJ"
                 title="CLT ou PJ"
-                className="w-5 h-auto md:w-4 md:h-auto opacity-90 transition group-hover:brightness-[2] group-hover:opacity-100"
+                className="w-5 h-auto md:w-4 md:h-auto opacity-70 transition group-hover:brightness-[2] group-hover:opacity-100"
               />
               <p
-                className="text-[var(--neon-cyan)]/75 BODY1 font-bold text-sm transition 
+                className="text-[var(--text-footer-cyan)]/75 BODY1 font-bold text-sm transition 
       group-hover:text-[var(--light-cyan-title)] group-hover:drop-shadow-[0_0_6px_#00ffcc]"
               >
                 Disponível para CLT ou PJ
@@ -238,10 +238,10 @@ const Footer = () => {
                 src={play}
                 alt="Remoto"
                 title="Remoto"
-                className="w-5 h-auto md:w-4 md:h-auto opacity-90 transition group-hover:brightness-[2] group-hover:opacity-100"
+                className="w-5 h-auto md:w-4 md:h-auto opacity-70 transition group-hover:brightness-[2] group-hover:opacity-100"
               />
               <p
-                className="text-[var(--neon-cyan)]/75 BODY1 font-bold text-sm transition 
+                className="text-[var(--text-footer-cyan)]/75 BODY1 font-bold text-sm transition 
       group-hover:text-[var(--light-cyan-title)] group-hover:drop-shadow-[0_0_6px_#00ffcc]"
               >
                 Apenas remoto
@@ -254,10 +254,10 @@ const Footer = () => {
                 src={play}
                 alt="Horário"
                 title="Horário"
-                className="w-5 h-auto md:w-4 md:h-auto opacity-90 transition group-hover:brightness-[2] group-hover:opacity-100"
+                className="w-5 h-auto md:w-4 md:h-auto opacity-70 transition group-hover:brightness-[2] group-hover:opacity-100"
               />
               <p
-                className="text-[var(--neon-cyan)]/75 BODY1 font-bold text-sm transition 
+                className="text-[var(--text-footer-cyan)]/75 BODY1 font-bold text-sm transition 
       group-hover:text-[var(--light-cyan-title)] group-hover:drop-shadow-[0_0_6px_#00ffcc]"
               >
                 Horário e valores à combinar

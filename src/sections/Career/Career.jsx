@@ -114,7 +114,10 @@ const Career = ({ id }) => {
   }, []);
 
   return (
-    <section className="px-4 sm:px-6 md:px-10 pt-30" id={id}>
+    <section
+      className="px-4 sm:px-6 md:px-10 pt-30 flex flex-col justify-center items-center"
+      id={id}
+    >
       <h3
         ref={headingRef}
         className="text-3xl md:text-4xl T1 font-bold text-[var(--light-cyan-title)] neon-text-glow-cyan pb-5 md:pb-15 text-center"
@@ -122,7 +125,7 @@ const Career = ({ id }) => {
         CARREIRA
       </h3>
 
-      <div className="pt-5 sm:pt-10 grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div className="pt-5 sm:pt-10 grid grid-cols-1 md:grid-cols-2 gap-15 sm:gap-40 max-w-max">
         <CareerGrid
           title="EXPERIÊNCIA"
           data={experience}
@@ -142,7 +145,7 @@ const Career = ({ id }) => {
       {/* Modals */}
       {selectedExperience && (
         <div
-          className="fixed inset-0 flex items-center justify-center bg-black/80 backdrop-blur-sm z-50"
+          className="fixed inset-0 flex items-center justify-center bg-[#080e17]/70 backdrop-blur-lg z-50"
           onClick={() => setSelectedExperience(null)}
         >
           <div
@@ -159,7 +162,7 @@ const Career = ({ id }) => {
 
       {selectedEducation && (
         <div
-          className="fixed inset-0 flex items-center justify-center bg-black/80 backdrop-blur-sm z-50"
+          className="fixed inset-0 flex items-center justify-center bg-[#080e17]/70 backdrop-blur-lg z-50"
           onClick={() => setSelectedEducation(null)}
         >
           <div

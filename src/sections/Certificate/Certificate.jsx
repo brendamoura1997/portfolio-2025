@@ -70,7 +70,8 @@ const Certificate = ({ id }) => {
     <section
       id={id}
       ref={sectionRef}
-      className="text-white pt-15 md:pt-30 pb-12 px-4 sm:px-6 md:px-10 relative"
+      className="text-white pt-15 md:pt-30 pb-12 px-4 sm:px-6 md:px-10 flex flex-col
+      justify-center items-center"
     >
       <div
         className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),
@@ -85,8 +86,8 @@ const Certificate = ({ id }) => {
       </h3>
 
       <div
-        className={`grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-4 mt-6 md:mt-10 relative 
-          justify-center ${showAll ? "mb-0" : "mb-15"}`}
+        className={`grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10 mt-6 md:mt-10 
+          relative justify-center ${showAll ? "mb-0" : "mb-15"}`}
       >
         <AnimatePresence>
           {visibleCerts.map((cert, index) => (
@@ -104,20 +105,9 @@ const Certificate = ({ id }) => {
         </AnimatePresence>
       </div>
 
-      {/* <div className="relative">
+      <div className="relative flex justify-center">
         <motion.div
-          onClick={handleShowAllClick}
-          className="absolute right-4 md:right-12 bottom-0 flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 border-2 border-[#00ffcc] text-[#00ffcc] text-lg sm:text-xl cursor-pointer"
-          animate={{ rotate: showAll ? 180 : 0, y: showAll ? 50 : 0 }}
-          transition={{ duration: 0.4 }}
-        >
-          ↓
-        </motion.div>
-      </div> */}
-
-      <div className="relative">
-        <motion.div
-          className="absolute right-5 sm:right-5 bottom-0 flex items-center justify-center w-8 h-8
+          className="absolute  bottom-0 flex items-center justify-center w-8 h-8
           sm:w-10 sm:h-10 border-2 text-lg sm:text-xl cursor-pointer"
           initial={{ rotate: 0, y: 0 }}
           animate={{ rotate: showAll ? 180 : 0, y: showAll ? 50 : 0 }}
@@ -135,12 +125,7 @@ const Certificate = ({ id }) => {
 
       {selectedCertificate && (
         <div
-          className="fixed inset-0 flex items-center justify-center z-[9999] p-2 sm:p-4"
-          style={{
-            backgroundColor: "rgba(0, 0, 0, 0.6)",
-            backdropFilter: "blur(8px)",
-            WebkitBackdropFilter: "blur(8px)",
-          }}
+          className="fixed inset-0 flex items-center justify-center z-[9999] p-2 sm:p-4 bg-[#050d1a]/80 backdrop-blur-lg"
           onClick={() => setSelectedCertificate(null)}
         >
           <div onClick={(e) => e.stopPropagation()} className="relative">
