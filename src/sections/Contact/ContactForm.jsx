@@ -100,7 +100,7 @@ const ContactForm = () => {
       />{" "}
       <form
         onSubmit={handleSubmit}
-        className="mt-4 BODY1 text-sm md:text-md sm:text-lg"
+        className="mt-4 BODY1 text-sm md:text-[1rem] sm:text-lg"
       >
         <input
           id="name"
@@ -199,7 +199,7 @@ const ContactForm = () => {
             type="button"
             width={`w-full h-[40px] text-sm md:text-md sm:w-full sm:h-[45px] relative`}
             paddingY="py-3"
-            text="Reset"
+            text="Limpar"
             onClick={handleReset}
           />
           <NeonBlueButton

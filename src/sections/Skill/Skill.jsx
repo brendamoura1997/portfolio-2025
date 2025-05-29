@@ -70,7 +70,7 @@ const Skill = ({ id }) => {
         sectionRef.current = el;
         sectionInViewRef(el);
       }}
-      className="relative text-white md:pt-30 pb-50 md:pb-20 px-10"
+      className="relative text-white pt-30 pb-50 md:pb-20 px-10"
     >
       <h3
         ref={headingRef}

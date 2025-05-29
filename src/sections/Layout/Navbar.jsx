@@ -5,6 +5,9 @@ import { motion } from "framer-motion";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+  const [activeSection, setActiveSection] = useState(null);
+  const hasInteracted = useRef(false);
+
   const menuRef = useRef(null);
 
   useEffect(() => {
@@ -22,6 +25,7 @@ const Navbar = () => {
   }, []);
 
   const scrollToSection = (sectionId) => {
+    hasInteracted.current = true;
     document
       .getElementById(sectionId)
       ?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -37,6 +41,38 @@ const Navbar = () => {
     { label: "Certificados", target: "certificates" },
     { label: "Contato", target: "contact" },
   ];
+
+  useEffect(() => {
+    const sectionIds = menuItems.map((item) => item.target);
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.6,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          if (entry.target.id !== "intro") {
+            hasInteracted.current = true;
+          }
+          setActiveSection(entry.target.id);
+        }
+      });
+    }, observerOptions);
+
+    sectionIds.forEach((id) => {
+      const section = document.getElementById(id);
+      if (section) observer.observe(section);
+    });
+
+    return () => {
+      sectionIds.forEach((id) => {
+        const section = document.getElementById(id);
+        if (section) observer.unobserve(section);
+      });
+    };
+  }, []);
 
   return (
     <motion.div
@@ -66,13 +102,14 @@ const Navbar = () => {
                 delay: isMounted ? index * 0.2 : 0,
                 ease: "easeOut",
               }}
-              className="w-40 py-5 whitespace-nowrap rounded-sm cursor-pointer relative active:scale-90 transition-transform 
-              duration-150 ease-in-out text-[var(--light-gray)] hover:neon-text-glow-cyan hover:text-white after:absolute 
-              after:left-0 after:bottom-0 after:h-[2px] after:w-full after:opacity-0 hover:after:opacity-100 
-              after:transition-opacity after:duration-300 after:bg-gradient-to-r after:from-transparent after:via-[var(--neon-cyan)] 
-              after:to-transparent"
+              className={`w-40 py-5 whitespace-nowrap rounded-sm cursor-pointer relative active:scale-90 transition-transform 
+    duration-150 ease-in-out text-[var(--light-gray)] hover:neon-text-glow-cyan hover:text-white`}
             >
               {item.label}
+              {activeSection === item.target &&
+                (item.target !== "intro" || hasInteracted.current) && (
+                  <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[var(--neon-cyan)] to-transparent" />
+                )}
             </motion.button>
           </React.Fragment>
         ))}
@@ -114,7 +151,10 @@ const Navbar = () => {
              active:scale-90 transition-transform duration-150 ease-in-out"
           >
             {item.label}
-            <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[var(--neon-cyan)] to-transparent" />
+            {activeSection === item.target &&
+              (item.target !== "intro" || hasInteracted.current) && (
+                <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[var(--neon-cyan)] to-transparent" />
+              )}
           </motion.button>
         ))}
       </motion.div>
