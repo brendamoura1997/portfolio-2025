@@ -1,6 +1,20 @@
 export const experience = [
   {
     title: "Full Stack Developer",
+    subtitle: "Oxyde Corporation Ltda",
+    duration: "05/2025 - atualmente",
+    description:
+      "Como Desenvolvedora Full Stack, atuo no desenvolvimento e manutenção de aplicações web completas, assegurando uma experiência de usuário consistente e a integração eficiente entre frontend e backend.",
+    extraDetails: [
+      "Desenvolvo e integro funcionalidades entre o frontend e o backend utilizando APIs REST, garantindo a troca de dados com alto desempenho e segurança.",
+      "Implemento interfaces ricas e consistentes utilizando React.js, Tailwind, TypeScript, Redux e a biblioteca de componentes Ant Design (antd), aplicando personalizações visuais com pré-processadores Less.",
+      "Colaboro em um ambiente ágil com metodologia Scrum, participando de reuniões diárias, planejamento de sprints e controle de tarefas via Notion.",
+      "Contribuo com o desenvolvimento backend em Node.js e Nest.js, aplicando boas práticas em arquitetura e persistência de dados com MongoDB, além de gerenciar dependências com Yarn, Pnpm e NPM.",
+    ],
+  },
+
+  {
+    title: "Full Stack Developer",
     subtitle: "Innovation Servicos Digitais Ltda",
     duration: "10/2022 - 07/2024",
     description:
