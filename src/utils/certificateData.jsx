@@ -16,6 +16,11 @@ const getBanner = (bannerName) => {
 
 const certificationsData = [
   {
+    title: "Diploma de Graduação em Ciência da Computação",
+    issuer: "IFC, Sônia Regina de Souza Fernandes",
+    date: "04/2023",
+  },
+  {
     title: "Python do básico ao avançado + ia",
     issuer: "Udemy, Caio Henrique Lemos Sampaio",
     date: "07/2022",
