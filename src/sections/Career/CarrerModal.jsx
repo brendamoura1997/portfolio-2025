@@ -52,8 +52,8 @@ const CarrerModal = ({
 
             {/* Ver mais */}
 
-            <p className="text-justify text-gray-300 leading-relaxed break-words">
-              {description}
+            <p className="text-justify text-gray-300 leading-relaxed break-words [&_b]:text-[var(--text-cyan)]">
+              <span dangerouslySetInnerHTML={{ __html: description }} />
             </p>
 
             <AnimatePresence>
@@ -63,11 +63,17 @@ const CarrerModal = ({
                   animate={{ height: "auto", opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="text-justify text-gray-300 leading-relaxed list-disc pl-7 font-semibold text-md mt-4 
-                  bg-[#FFF]/10 p-4 rounded-lg overflow-hidden"
+                  className="text-justify text-gray-300 leading-relaxed list-none text-md mt-4
+                  bg-[#FFF]/10 p-4 md:py-5 md:px-6 rounded-lg overflow-hidden flex flex-col gap-5"
                 >
                   {extraDetails.map((detail, index) => (
-                    <li key={index}>{detail}</li>
+                    <li
+                      key={index}
+                      dangerouslySetInnerHTML={{ __html: detail }}
+                      className="[&_b]:text-[var(--text-cyan)] 
+                      relative pl-6 before:content-['►'] before:absolute before:left-0
+                       before:text-[var(--light-cyan-title)]"
+                    />
                   ))}
                 </motion.ul>
               )}

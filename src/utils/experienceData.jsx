@@ -45,11 +45,10 @@ export const experience = [
     subtitle: "Instituto Federal Catarinense",
     duration: "08/2020 - 01/2021",
     description:
-      "Durante o Projeto de Pesquisa no Instituto Federal Catarinense, atuei na documentação técnica e no desenvolvimento frontend de sistemas, contribuindo para a organização e clareza do projeto.",
+      "Atuei em um projeto de pesquisa e desenvolvimento de uma <b>plataforma de telemedicina</b> durante o período pandêmico. Minhas contribuições incluíram:",
     extraDetails: [
-      "Elaborei a documentação funcional e técnica do sistema, facilitando a manutenção e o entendimento por outros desenvolvedores e pesquisadores.",
-      "Participei da análise de requisitos e da estruturação de funcionalidades no frontend, garantindo consistência entre o sistema e sua documentação.",
-      "Desenvolvi interfaces de usuário utilizando tecnologias web, com foco em usabilidade e alinhamento com os objetivos do projeto.",
+      "<b>Participação ativa em reuniões de levantamento de requisitos</b> para a plataforma, aplicando conhecimentos em <b>UX Design</b> para garantir usabilidade e experiência do usuário.",
+      "<b>Elaboração de relatórios técnicos</b> sobre o andamento do desenvolvimento e <b>documentação das funcionalidades</b> implementadas.",
     ],
   },
 ];

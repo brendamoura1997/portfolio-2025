@@ -7,7 +7,7 @@ const CareerCard = ({ title, subtitle, duration, description, onClick }) => {
       onClick={onClick}
     >
       <div className="flex flex-wrap justify-between items-center gap-2">
-        <h3 className="text-l font-bold text-[var(--light-cyan-title)]">
+        <h3 className="text-lg font-bold text-[var(--light-cyan-title)]">
           {title}
         </h3>
         <p className="text-gray-400 text-sm whitespace-normal">{subtitle}</p>
@@ -16,7 +16,7 @@ const CareerCard = ({ title, subtitle, duration, description, onClick }) => {
         {duration}
       </p>
       <p className="mt-2 text-[var(--text-light-gray)] BODY1 text-justify break-words text-sm md:text-md leading-relaxed">
-        {description}
+        <span dangerouslySetInnerHTML={{ __html: description }} />
       </p>
     </div>
   );

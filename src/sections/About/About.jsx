@@ -91,7 +91,7 @@ const About = ({ id }) => {
       <div ref={divRef} className="w-full relative">
         <motion.div
           animate={{
-            maxWidth: showMore ? "1200px" : "700px",
+            maxWidth: showMore ? "1200px" : "750px",
             borderWidth: showMore ? "1px" : "0px",
             borderColor: showMore ? "var(--neon-cyan)" : "#000000",
             height: isTabletPortrait && showMore ? "600px" : "fit-content",
@@ -116,19 +116,20 @@ const About = ({ id }) => {
               <div className="flex md:ml-5 w-full sm:pb-20 md:pb-0 ">
                 <div
                   className="flex-1 flex flex-col text-sm md:text-md BODY1 text-justify leading-relaxed gap-4
-          text-[var(--text-light-gray)]  pb-10 justify-center"
+          text-[var(--text-light-gray)] pb-10 justify-center"
                 >
                   <p>
                     Bacharel em Ciência da Computação com foco em
                     Desenvolvimento Web Full Stack e Design de Interfaces.
                   </p>
                   <p>
-                    Minha experiência abrange tecnologias de frontend e backend,
-                    além de princípios de UI/UX, permitindo-me criar aplicações
-                    web completas com foco em desempenho e usabilidade.
+                    Minha experiência abrange tecnologias de frontend, backend e
+                    banco de dados, além de princípios de UI/UX, permitindo-me
+                    criar aplicações web completas com foco em desempenho e
+                    usabilidade.
                   </p>
                   <p>
-                    Atuei como desenvolvedora freelancer, desenvolvendo
+                    Atualmente atuo como prestadora de serviço, desenvolvendo
                     interfaces responsivas, APIs escaláveis e sistemas
                     integrados.
                   </p>
@@ -147,11 +148,11 @@ const About = ({ id }) => {
                         className="w-full md:w-auto flex flex-col gap-4"
                       >
                         <p>
-                          Tenho uma base sólida em engenharia de software, com
-                          prática em frameworks modernos como React, Node.js e
-                          Next.js. Minhas habilidades incluem arquitetura de
-                          sistemas, integração com bancos de dados e
-                          desenvolvimento de interfaces intuitivas.
+                          Tenho uma base sólida em desenvolvimento de software,
+                          com prática em tecnologias modernas como React,
+                          Node.js e Next.js. Minhas habilidades incluem
+                          arquitetura de sistemas, integração com bancos de
+                          dados e desenvolvimento de interfaces intuitivas.
                         </p>
                         <p>
                           A combinação de competências técnicas e sensibilidade
