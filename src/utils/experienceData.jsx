@@ -13,7 +13,7 @@ export const experience = [
           "🌍 Primeira experiência com comunicação internacional, interagindo com desenvolvedores de Bangladesh e um sócio russo, com reuniões e trocas de conhecimento em inglês.",
         items: [
           "<b>Participação ativa em reuniões</b> e trocas de conhecimento <b>em inglês</b>",
-          "Interação com desenvolvedores de <b>Bangladesh</b> e <b>sócio russo</b>",
+          "Interação com desenvolvedores de <b>Bangladesh</b> e sócio da <b>Rússia</b>",
         ],
       },
 
