@@ -6,7 +6,7 @@ export const experience = [
     subtitle: "Oxyde Corporation Ltda",
     duration: "05/2025 - atualmente",
     description:
-      "Atuação como <b>desenvolvedora full-stack</b> no projeto <b>Sayyo</b>, uma plataforma para <b>criadores de conteúdo russos</b>, sendo esta minha primeira <b>experiência com equipe internacional</b>.",
+      "Atuação como <b>Desenvolvedora Web full-stack</b> no projeto <b>Sayyo</b>, uma plataforma para <b>criadores de conteúdo russos</b>, sendo esta minha primeira <b>experiência com equipe internacional</b>.",
     extraDetails: [
       {
         title:
@@ -56,7 +56,7 @@ export const experience = [
     subtitle: "Innovation Servicos Digitais Ltda",
     duration: "10/2022 - 07/2024",
     description:
-      "Atuei como <b>Desenvolvedora Web</b>, contribuindo para três grandes projetos: <b>Givaways, Bravus e Privify</b>. Atuação no desenvolvimento <b>full-stack</b> em um squad multifuncional, seguindo metodologias ágeis <b>(Scrum)</b> e <b>boas práticas de código</b>.",
+      "Atuei como <b>Desenvolvedora Web full-stack</b>, contribuindo para três grandes projetos: <b>Givaways, Bravus e Privify</b>. Atuação no desenvolvimento <b>full-stack</b> em um squad multifuncional, seguindo metodologias ágeis <b>(Scrum)</b> e <b>boas práticas de código</b>.",
     extraDetails: [
       {
         title: "🎯 PROJETO GIVAWAYS",

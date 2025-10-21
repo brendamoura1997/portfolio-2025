@@ -4,7 +4,7 @@ export const education = [
     subtitle: "Instituto Federal Catarinense",
     duration: "2018 - 2023",
     description:
-      "Formação de bacharelado com aprendizados sobre desenvolvimento de software, fundamentos teóricos da computação, inteligência artificial e práticas modernas da engenharia de software.",
+      "<b>Formação de bacharelado</b> com aprendizados sobre desenvolvimento de software, fundamentos teóricos da computação, <b>inteligência artificial</b> e práticas modernas da <b>engenharia de software</b>.",
     extraDetails: [
       {
         title: "► Destaques Acadêmicos e Competências",
@@ -20,10 +20,10 @@ export const education = [
 
   {
     title: "Técnico em Informática para Internet",
-    subtitle: "ITB Profª Maria Sylvia Chaluppe Mello",
+    subtitle: "Instituto Técnico de Barueri",
     duration: "2012 - 2014",
     description:
-      "Formação técnica integrada ao ensino médio com foco em desenvolvimento web, banco de dados e segurança da informação.",
+      "<b>Formação técnica integrada ao ensino médio</b> com foco em <b>desenvolvimento web</b>, banco de dados e segurança da informação.",
     extraDetails: [
       {
         title: "► Competências Técnicas Desenvolvidas",
