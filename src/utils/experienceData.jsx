@@ -1,3 +1,5 @@
+import { title } from "framer-motion/client";
+
 export const experience = [
   {
     title: "Full Stack Developer",
@@ -32,11 +34,45 @@ export const experience = [
     subtitle: "Instituto Federal Catarinense",
     duration: "04/2021 - 01/2022",
     description:
-      "Como monitora no Instituto Federal Catarinense, ofereci suporte individualizado a alunos nas disciplinas de programação, contribuindo para o desenvolvimento de suas habilidades em Java e C",
+      "Atuei como monitora das disciplinas de <b>Algoritmos</b> e <b>Linguagem de Programação I</b>, prestando suporte aos alunos.",
     extraDetails: [
-      "Auxiliei alunos na resolução de exercícios e projetos acadêmicos, promovendo o entendimento de conceitos fundamentais de programação.",
-      "Colaborei com professores no acompanhamento do progresso dos alunos, reforçando conteúdos e esclarecendo dúvidas.",
-      "Ofereci suporte técnico e didático em linguagens como Java e C, adaptando explicações conforme o nível de conhecimento dos estudantes.",
+      {
+        title: "► Apoio pedagógico e interpessoal:",
+        items: [
+          "<b>Auxiliei alunos</b> na resolução de <b>exercícios e projetos acadêmicos</b>, promovendo o entendimento de conceitos fundamentais de programação.",
+          "<b>Colaborei com professores</b> no acompanhamento do <b>progresso dos alunos</b>, reforçando conteúdos e esclarecendo dúvidas.",
+          "<b>Ofereci suporte técnico e didático</b> em linguagens como Java e C, <b>adaptando explicações</b> conforme o nível de conhecimento dos estudantes.",
+        ],
+      },
+      {
+        title: "► Trabalhos Finais Orientados:",
+        items: [
+          "Algoritmos: Desenvolvimento de um <b>mapa de calor</b> em C",
+          "Linguagem de Programação I: <b>Sistema de controle de gestão</b> com integração a banco de dados MySQL",
+        ],
+      },
+      {
+        title: "► Suporte na Linguagem C:",
+        items: [
+          "Sintaxe da linguagem e teste de mesa",
+          "Estruturas condicionais e de repetição",
+          "Vetores, matrizes e modularização de algoritmos",
+          "Funções, procedimentos e recursividade",
+          "Manipulação de arquivos e ponteiros",
+        ],
+      },
+      {
+        title: "► Suporte na Linguagem Java:",
+        items: [
+          "Sintaxe, estruturas de repetição e condicionais",
+          "Programação Orientada a Objetos (classes, objetos, encapsulamento, herança e polimorfismo)",
+          "Modificadores de acesso e construtores",
+          "Sobrecarga e sobrescrita de métodos",
+          "Implementação de <b>interfaces gráficas (WindowBuilder)</b>",
+          "Desenvolvimento de <b>CRUD com Java + MySQL</b> (utilizando o modelo DAO)",
+          "Troca de informações entre frames e persistência de dados",
+        ],
+      },
     ],
   },
 
@@ -45,10 +81,15 @@ export const experience = [
     subtitle: "Instituto Federal Catarinense",
     duration: "08/2020 - 01/2021",
     description:
-      "Atuei em um projeto de pesquisa e desenvolvimento de uma <b>plataforma de telemedicina</b> durante o período pandêmico. Minhas contribuições incluíram:",
+      "Atuei em um projeto de pesquisa e desenvolvimento de uma <b>plataforma de telemedicina</b> durante o período pandêmico.",
     extraDetails: [
-      "<b>Participação ativa em reuniões de levantamento de requisitos</b> para a plataforma, aplicando conhecimentos em <b>UX Design</b> para garantir usabilidade e experiência do usuário.",
-      "<b>Elaboração de relatórios técnicos</b> sobre o andamento do desenvolvimento e <b>documentação das funcionalidades</b> implementadas.",
+      {
+        title: "► Minhas principais contribuições:",
+        items: [
+          "<b>Participação ativa em reuniões de levantamento de requisitos</b> para a plataforma, aplicando conhecimentos em <b>UX Design</b> para garantir usabilidade e experiência do usuário.",
+          "<b>Elaboração de relatórios técnicos</b> sobre o andamento do desenvolvimento e <b>documentação das funcionalidades</b> implementadas.",
+        ],
+      },
     ],
   },
 ];
