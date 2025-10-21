@@ -23,7 +23,8 @@ const CarrerModal = ({
     >
       <motion.div
         onClick={(e) => e.stopPropagation()}
-        className="relative bg-[#090d14]/80 backdrop-blur-sm text-white rounded-lg w-full max-w-5xl max-h-[90vh] flex flex-col
+        className="relative bg-[#090d14]/80 backdrop-blur-sm text-white rounded-lg w-full max-h-[88vh] 
+                   md:max-w-5xl md:max-h-[80vh] flex flex-col md:mt-8
                    shadow-[-0px_-0px_20px_5px_#013880] sm:shadow-[-0px_-0px_20px_0px_#013880] 
                    animate-[pulse-glow-about_3.0s_ease-in-out_infinite]  hover:animate-[pulse-glow-button_3.0s_ease-in-out_infinite]
                    transition-all duration-300"
@@ -39,38 +40,69 @@ const CarrerModal = ({
         >
           ✕
         </button>
-        <div className="overflow-y-auto flex-grow min-h-0 pb-4 px-10 mt-10">
+        <div className="overflow-y-auto flex-grow min-h-0 pb-4 px-5 md:px-10 mt-10">
           <div className="viewMore">
             <div className="flex flex-col sm:flex-row justify-between items-center mb-4 gap-2">
-              <h3 className="text-xl md:text-2xl font-bold text-[var(--light-cyan-title)]">
+              <h3 className="text-lg md:text-2xl font-bold text-[var(--light-cyan-title)]">
                 {title}
               </h3>
-              <p className="text-gray-400 text-lg">{subtitle}</p>
+              <p className="text-gray-400 text-base md:text-lg">{subtitle}</p>
             </div>
 
-            <p className="text-gray-500 text-sm italic mb-4">{duration}</p>
+            <p className="text-gray-500 text-xs md:text-sm italic mb-4">
+              {duration}
+            </p>
 
             {/* Ver mais */}
 
-            <p className="text-justify text-gray-300 leading-relaxed break-words">
-              {description}
+            <p className="text-justify text-sm md:text-base text-gray-300 leading-relaxed break-words [&_b]:text-[var(--text-cyan)]">
+              <span dangerouslySetInnerHTML={{ __html: description }} />
             </p>
 
             <AnimatePresence>
-              {isExpanded && extraDetails && extraDetails.length > 0 && (
-                <motion.ul
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: "auto", opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="text-justify text-gray-300 leading-relaxed list-disc pl-7 font-semibold text-md mt-4 
-                  bg-[#FFF]/10 p-4 rounded-lg overflow-hidden"
-                >
-                  {extraDetails.map((detail, index) => (
-                    <li key={index}>{detail}</li>
-                  ))}
-                </motion.ul>
-              )}
+              {isExpanded &&
+                extraDetails &&
+                Array.isArray(extraDetails) &&
+                extraDetails.length > 0 && (
+                  <motion.ul
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="text-left md:text-justify text-gray-300 leading-relaxed list-none 
+                    text-md mt-4 bg-[#FFF]/10 px-4 py-6 md:py-5 md:px-6 rounded-lg overflow-hidden 
+                    flex flex-col gap-5 text-sm md:text-base"
+                  >
+                    {extraDetails.map((detailGroup, groupIndex) => (
+                      <div key={groupIndex} className="flex flex-col gap-4">
+                        {detailGroup.title && (
+                          <p
+                            className="font-semibold text-[var(--light-cyan-title)]"
+                            dangerouslySetInnerHTML={{
+                              __html: detailGroup.title,
+                            }}
+                          />
+                        )}
+
+                        {detailGroup.items &&
+                          Array.isArray(detailGroup.items) &&
+                          detailGroup.items.length > 0 && (
+                            <>
+                              {detailGroup.items.map((detail, index) => (
+                                <li
+                                  key={index}
+                                  dangerouslySetInnerHTML={{ __html: detail }}
+                                  className="[&_b]:text-[var(--text-cyan)] relative 
+                                  pl-5 md:pl-10 before:content-['»'] before:absolute 
+                                  before:left-0 md:before:left-5 before:text-[var(--light-cyan-title)]"
+                                />
+                              ))}
+                            </>
+                          )}
+                      </div>
+                    ))}
+                  </motion.ul>
+                )}
             </AnimatePresence>
           </div>
 

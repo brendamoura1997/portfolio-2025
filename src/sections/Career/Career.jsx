@@ -167,7 +167,7 @@ const Career = ({ id }) => {
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="relative max-w-[90%] md:max-w-[70%]"
+            className="relative w-full md:max-w-[70%]"
           >
             <CarrerModal
               {...selectedEducation}
