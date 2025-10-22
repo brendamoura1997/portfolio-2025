@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import NeonButton from "../../components/ButtonNeon";
 import { motion } from "framer-motion";
+import useScreenSize from "../../hooks/useScreenSize";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,6 +17,7 @@ const About = ({ id }) => {
   const [isMounted, setIsMounted] = useState(false);
   const headingRef = useRef(null);
   const divRef = useRef(null);
+  const screenSize = useScreenSize();
 
   useEffect(() => {
     const checkTabletPortrait = () => {
@@ -93,7 +95,8 @@ const About = ({ id }) => {
           animate={{
             maxWidth: showMore ? "1200px" : "750px",
             borderWidth: showMore ? "1px" : "0px",
-            borderColor: showMore ? "var(--neon-cyan)" : "#000000",
+            borderColor:
+              showMore && screenSize >= 768 ? "var(--neon-cyan)" : "#000000",
             height: isTabletPortrait && showMore ? "600px" : "fit-content",
           }}
           style={{
@@ -150,13 +153,18 @@ const About = ({ id }) => {
                         transition={{ duration: 0.2, ease: "easeInOut" }}
                         className="w-full md:w-auto flex flex-col gap-4"
                       >
-                        <p>
+                        <ul className="list-disc list-inside text-gray-300 text-sm mt-2">
                           Tenho uma base sólida em desenvolvimento de software,
                           com prática em tecnologias modernas como React,
-                          Node.js e Next.js. Minhas habilidades incluem
-                          arquitetura de sistemas, integração com bancos de
-                          dados e desenvolvimento de interfaces intuitivas.
-                        </p>
+                          Node.js e Next.js. Minhas habilidades incluem:{" "}
+                          <b>
+                            <li>Arquitetura de sistemas</li>
+                            <li>Integração com bancos de dados </li>
+                            <li className="text-start">
+                              Desenvolvimento de interfaces intuitivas
+                            </li>
+                          </b>
+                        </ul>
                         <p>
                           A combinação de competências técnicas e sensibilidade
                           para design me permite entregar soluções web que aliam
