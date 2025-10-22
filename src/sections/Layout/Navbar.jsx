@@ -87,7 +87,7 @@ const Navbar = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: isMounted ? 1 : 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="hidden lg:flex items-center justify-center w-full clip-diagonal 
+        className="hidden md:flex items-center justify-center w-full clip-diagonal 
          transition-all duration-500 BODY1 text-sm"
       >
         {menuItems.map((item, index) => (
@@ -116,7 +116,7 @@ const Navbar = () => {
       </motion.div>
 
       {/* Mobile & Tablet Navbar */}
-      <div className="lg:hidden flex">
+      <div className="md:hidden flex">
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="p-2 bg-[#111] cursor-pointer border border-[var(--neon-cyan)] hover:border-[var(--neon-cyan)] 

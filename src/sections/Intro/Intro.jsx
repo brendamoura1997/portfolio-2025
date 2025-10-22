@@ -34,7 +34,7 @@ const Intro = ({ id }) => {
     <div
       id={id}
       ref={containerRef}
-      className="relative flex flex-col pt-20 md:pt-25 sm:pt-0 sm:justify-center bg-transparent text-white overflow-hidden min-h-screen z-20"
+      className="relative flex flex-col pt-20 lg:pt-25 sm:pt-0 sm:justify-center bg-transparent text-white overflow-hidden min-h-screen z-20"
     >
       <video
         className="absolute inset-0 w-full h-full object-cover z-0"
@@ -50,7 +50,7 @@ const Intro = ({ id }) => {
       <div className="w-full flex flex-col justify-center items-center relative">
         <div
           ref={textRef}
-          className="px-3 md:px-5 py-25 md:py-15 text-center bg-[#000000]/10 backdrop-blur-sm 
+          className="px-3 lg:px-5 py-25 md:py-30 lg:py-15 text-center bg-[#000000]/10 backdrop-blur-sm 
           md:rounded-xl shadow-[-0px_-0px_20px_5px_#013880] sm:shadow-[-0px_-0px_20px_0px_#013880]
           flex justify-center md:w-[640px] items-center"
         >
@@ -61,8 +61,8 @@ const Intro = ({ id }) => {
                 section?.scrollIntoView({ behavior: "smooth" });
               }}
               className="flex w-full cursor-pointer justify-center text-center items-center T1 text-[#ceffff] neon-text-glow-cyan 
-            text-[2.5rem] leading-none md:text-6xl py-2 hover:animate-[pulse-glow-text_1s_ease-in-out_infinite] transition-colors 
-            duration-100 "
+            text-[2.2rem] sm:text-[2.5rem] leading-none md:text-6xl py-2 hover:animate-[pulse-glow-text_1s_ease-in-out_infinite] 
+            transition-colors duration-100 "
             >
               BRENDA MOURA
             </button>

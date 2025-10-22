@@ -125,7 +125,7 @@ const Career = ({ id }) => {
         CARREIRA
       </h3>
 
-      <div className="pt-5 sm:pt-10 grid grid-cols-1 md:grid-cols-2 gap-15 sm:gap-40 max-w-max z-20">
+      <div className="pt-5 lg:pt-10 grid grid-cols-1 md:grid-cols-2 gap-15 lg:gap-40 max-w-max z-20">
         <CareerGrid
           title="EXPERIÊNCIA"
           data={experience}

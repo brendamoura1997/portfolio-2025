@@ -80,7 +80,8 @@ const Certificate = ({ id }) => {
 
       <h3
         ref={headingRef}
-        className="text-3xl md:text-4xl T1 font-bold text-[var(--light-cyan-title)] neon-text-glow-cyan pb-5 md:pb-15 text-center"
+        className="text-3xl md:text-4xl T1 font-bold text-[var(--light-cyan-title)] neon-text-glow-cyan pb-5 
+        lg:pb-15 text-center"
       >
         CERTIFICADOS
       </h3>
