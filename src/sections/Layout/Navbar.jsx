@@ -79,7 +79,7 @@ const Navbar = () => {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: isMounted ? 1 : 0, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="fixed top-0 z-50 w-full bg-[#090d14]/65 backdrop-blur-3xl flex justify-end lg:justify-center px-4 
+      className="fixed top-0 z-30 md:z-50 w-full bg-[#090d14]/65 backdrop-blur-3xl flex justify-end lg:justify-center px-4 
       shadow-[0_10px_15px_rgba(1,10,22,0.9)]"
     >
       {/* Desktop Navbar */}

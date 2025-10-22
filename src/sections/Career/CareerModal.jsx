@@ -23,11 +23,14 @@ const CarrerModal = ({
     >
       <motion.div
         onClick={(e) => e.stopPropagation()}
-        className="relative bg-[#090d14]/80 backdrop-blur-sm text-white rounded-lg w-full max-h-[88vh] 
+        className={`relative bg-[#090d14]/80 backdrop-blur-sm text-white md:rounded-lg 
+                   ${
+                     isExpanded ? `w-full` : `max-w-[98vw] rounded-lg`
+                   }  max-h-[100vh]
                    md:max-w-5xl md:max-h-[80vh] flex flex-col md:mt-8
                    shadow-[-0px_-0px_20px_5px_#013880] sm:shadow-[-0px_-0px_20px_0px_#013880] 
-                   animate-[pulse-glow-about_3.0s_ease-in-out_infinite]  hover:animate-[pulse-glow-button_3.0s_ease-in-out_infinite]
-                   transition-all duration-300"
+                   animate-[pulse-glow-about_3.0s_ease-in-out_infinite] hover:animate-[pulse-glow-button_3.0s_ease-in-out_infinite]
+                   transition-all duration-300`}
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         exit={{ scale: 0.8, opacity: 0 }}

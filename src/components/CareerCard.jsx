@@ -3,7 +3,7 @@ const CareerCard = ({ title, subtitle, duration, description, onClick }) => {
     <div
       className="max-w-xl p-5 rounded-lg relative bg-[#00132b]/20 backdrop-blur-sm shadow-[-0px_-0px_10px_5px_#013880] 
       sm:shadow-[-0px_-0px_20px_0px_#013880] hover:animate-[pulse-glow-button_1.5s_ease-in-out_infinite] 
-      border-[0.5px] border-transparent hover:border-[var(--light-cyan)]/55 transition-all cursor-pointer "
+      border-[0.5px] border-transparent hover:border-[var(--light-cyan)]/55 transition-all cursor-pointer z-10"
       onClick={onClick}
     >
       <div className="flex flex-wrap justify-between items-center gap-2">
@@ -15,7 +15,7 @@ const CareerCard = ({ title, subtitle, duration, description, onClick }) => {
       <p className="text-[var(--text-gray-muted)] text-xs italic whitespace-normal">
         {duration}
       </p>
-      <p className="mt-2 text-[var(--text-light-gray)] BODY1 text-justify break-words text-sm md:text-md leading-relaxed">
+      <p className="mt-2 text-[var(--text-light-gray)] BODY1 text-justify break-words text-xs md:text-sm leading-relaxed">
         <span dangerouslySetInnerHTML={{ __html: description }} />
       </p>
     </div>
