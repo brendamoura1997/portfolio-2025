@@ -49,7 +49,7 @@ const CarrerModal = ({
               <p className="text-gray-400 text-base md:text-lg">{subtitle}</p>
             </div>
 
-            <p className="text-gray-500 text-xs md:text-sm italic mb-4">
+            <p className="text-[var(--text-gray-muted)] text-xs md:text-sm italic mb-4">
               {duration}
             </p>
 

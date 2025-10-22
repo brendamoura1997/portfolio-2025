@@ -34,7 +34,7 @@ const Intro = ({ id }) => {
     <div
       id={id}
       ref={containerRef}
-      className="relative flex flex-col pt-25 sm:pt-0 sm:justify-center bg-transparent text-white overflow-hidden min-h-screen z-20"
+      className="relative flex flex-col pt-15 md:pt-25 sm:pt-0 sm:justify-center bg-transparent text-white overflow-hidden min-h-screen z-20"
     >
       <video
         className="absolute inset-0 w-full h-full object-cover z-0"

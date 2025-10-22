@@ -80,7 +80,7 @@ const About = ({ id }) => {
   return (
     <section
       id={id}
-      className="relative text-white pt-20 sm:pt-30 pb-10 px-10 overflow-hidden"
+      className="relative text-white pt-20 sm:pt-30 pb-10 px-0 md:px-10 overflow-hidden"
     >
       <h3
         ref={headingRef}
@@ -115,23 +115,25 @@ const About = ({ id }) => {
 
               <div className="flex md:ml-5 w-full sm:pb-20 md:pb-0 ">
                 <div
-                  className="flex-1 flex flex-col text-sm md:text-md BODY1 text-justify leading-relaxed gap-4
+                  className="flex-1 flex flex-col text-xs md:text-sm md:text-md BODY1 text-justify leading-relaxed gap-4
           text-[var(--text-light-gray)] pb-10 justify-center"
                 >
                   <p>
-                    Bacharel em Ciência da Computação com foco em
+                    <b>Bacharel em Ciência da Computação</b> com foco em
                     Desenvolvimento Web Full Stack e Design de Interfaces.
                   </p>
                   <p>
                     Minha experiência abrange tecnologias de frontend, backend e
                     banco de dados, além de princípios de UI/UX, permitindo-me
-                    criar aplicações web completas com foco em desempenho e
-                    usabilidade.
+                    criar <b>aplicações web completas</b> com foco em desempenho
+                    e usabilidade.
                   </p>
                   <p>
                     Atualmente atuo como prestadora de serviço, desenvolvendo
-                    interfaces responsivas, APIs escaláveis e sistemas
-                    integrados.
+                    <b>
+                      interfaces responsivas, APIs escaláveis e sistemas
+                      integrados.
+                    </b>
                   </p>
                   <AnimatePresence>
                     {showMore && (

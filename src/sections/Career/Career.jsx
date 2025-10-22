@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { experience } from "../../utils/experienceData";
 import { education } from "../../utils/educationData";
-import CarrerModal from "./CarrerModal";
+import CareerModal from "./CareerModal";
 import CareerGrid from "../../components/CareerGrid";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -152,7 +152,7 @@ const Career = ({ id }) => {
             onClick={(e) => e.stopPropagation()}
             className="relative max-w-[90%] md:max-w-[70%]"
           >
-            <CarrerModal
+            <CareerModal
               {...selectedExperience}
               onClose={() => setSelectedExperience(null)}
             />
@@ -169,7 +169,7 @@ const Career = ({ id }) => {
             onClick={(e) => e.stopPropagation()}
             className="relative w-full md:max-w-[70%]"
           >
-            <CarrerModal
+            <CareerModal
               {...selectedEducation}
               onClose={() => setSelectedEducation(null)}
             />
