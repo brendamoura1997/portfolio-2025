@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import NeonButton from "../../components/ButtonNeon";
 import { motion } from "framer-motion";
+import useScreenSize from "../../hooks/useScreenSize";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,6 +17,7 @@ const About = ({ id }) => {
   const [isMounted, setIsMounted] = useState(false);
   const headingRef = useRef(null);
   const divRef = useRef(null);
+  const screenSize = useScreenSize();
 
   useEffect(() => {
     const checkTabletPortrait = () => {
@@ -80,7 +82,9 @@ const About = ({ id }) => {
   return (
     <section
       id={id}
-      className="relative text-white pt-20 sm:pt-30 pb-10 px-10 overflow-hidden"
+      className={`relative text-white pt-20 sm:pt-30 pb-10 ${
+        showMore ? `px-0` : `px-1`
+      } md:px-10 overflow-hidden`}
     >
       <h3
         ref={headingRef}
@@ -93,7 +97,8 @@ const About = ({ id }) => {
           animate={{
             maxWidth: showMore ? "1200px" : "750px",
             borderWidth: showMore ? "1px" : "0px",
-            borderColor: showMore ? "var(--neon-cyan)" : "#000000",
+            borderColor:
+              showMore && screenSize >= 768 ? "var(--neon-cyan)" : "#000000",
             height: isTabletPortrait && showMore ? "600px" : "fit-content",
           }}
           style={{
@@ -115,23 +120,26 @@ const About = ({ id }) => {
 
               <div className="flex md:ml-5 w-full sm:pb-20 md:pb-0 ">
                 <div
-                  className="flex-1 flex flex-col text-sm md:text-md BODY1 text-justify leading-relaxed gap-4
-          text-[var(--text-light-gray)] pb-10 justify-center"
+                  className="flex-1 flex flex-col text-xs md:text-sm md:text-md BODY1 text-justify leading-relaxed gap-4
+          text-[var(--text-light-gray)] [&_b]:text-[var(--text-cyan)] pb-10 justify-center"
                 >
                   <p>
-                    Bacharel em Ciência da Computação com foco em
+                    <b>Bacharel em Ciência da Computação</b> com foco em
                     Desenvolvimento Web Full Stack e Design de Interfaces.
                   </p>
                   <p>
                     Minha experiência abrange tecnologias de frontend, backend e
                     banco de dados, além de princípios de UI/UX, permitindo-me
-                    criar aplicações web completas com foco em desempenho e
-                    usabilidade.
+                    criar <b>aplicações Web completas</b> com foco em desempenho
+                    e usabilidade.
                   </p>
                   <p>
-                    Atualmente atuo como prestadora de serviço, desenvolvendo
-                    interfaces responsivas, APIs escaláveis e sistemas
-                    integrados.
+                    Atualmente atuo como prestadora de serviços, desenvolvendo
+                    <b>
+                      {" "}
+                      interfaces responsivas, APIs escaláveis e sistemas
+                      integrados.
+                    </b>
                   </p>
                   <AnimatePresence>
                     {showMore && (
@@ -147,13 +155,18 @@ const About = ({ id }) => {
                         transition={{ duration: 0.2, ease: "easeInOut" }}
                         className="w-full md:w-auto flex flex-col gap-4"
                       >
-                        <p>
+                        <ul className="list-disc list-inside text-gray-300 text-sm mt-2">
                           Tenho uma base sólida em desenvolvimento de software,
                           com prática em tecnologias modernas como React,
-                          Node.js e Next.js. Minhas habilidades incluem
-                          arquitetura de sistemas, integração com bancos de
-                          dados e desenvolvimento de interfaces intuitivas.
-                        </p>
+                          Node.js e Next.js. Minhas habilidades incluem:{" "}
+                          <b>
+                            <li>Arquitetura de sistemas</li>
+                            <li>Integração com bancos de dados </li>
+                            <li className="text-start">
+                              Desenvolvimento de interfaces intuitivas
+                            </li>
+                          </b>
+                        </ul>
                         <p>
                           A combinação de competências técnicas e sensibilidade
                           para design me permite entregar soluções web que aliam

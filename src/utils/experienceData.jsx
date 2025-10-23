@@ -6,12 +6,12 @@ export const experience = [
     subtitle: "Oxyde Corporation Ltda",
     duration: "05/2025 - atualmente",
     description:
-      "Atuação como <b>Desenvolvedora Web full-stack</b> no projeto <b>Sayyo</b>, uma plataforma para <b>criadores de conteúdo russos</b>, sendo esta minha primeira <b>experiência com equipe internacional</b>.",
+      "Atuação como desenvolvedora <b>Web full-stack</b> no projeto Sayyo, uma plataforma para <b>criadores de conteúdo russos</b>, sendo esta minha primeira <b>experiência com equipe internacional</b>.",
     extraDetails: [
       {
-        title:
-          "🌍 Primeira experiência com comunicação internacional, interagindo com desenvolvedores de Bangladesh e um sócio russo, com reuniões e trocas de conhecimento em inglês.",
+        title: "",
         items: [
+          "🌍 <b>Primeira experiência com comunicação internacional</b>, interagindo com desenvolvedores de Bangladesh e um sócio russo, com reuniões e trocas de conhecimento em inglês.",
           "<b>Participação ativa em reuniões</b> e trocas de conhecimento <b>em inglês</b>",
           "Interação com desenvolvedores de <b>Bangladesh</b> e sócio da <b>Rússia</b>",
         ],
@@ -56,7 +56,7 @@ export const experience = [
     subtitle: "Innovation Servicos Digitais Ltda",
     duration: "10/2022 - 07/2024",
     description:
-      "Atuei como <b>Desenvolvedora Web full-stack</b>, contribuindo para três grandes projetos: <b>Givaways, Bravus e Privify</b>. Atuação no desenvolvimento <b>full-stack</b> em um squad multifuncional, seguindo metodologias ágeis <b>(Scrum)</b> e <b>boas práticas de código</b>.",
+      "Atuação no desenvolvimento <b>Web full-stack</b> em um squad multifuncional, seguindo metodologias ágeis <b>(Scrum)</b> e <b>boas práticas de código</b>. Contribuí em três grandes projetos: Givaways, Bravus e Privify.",
     extraDetails: [
       {
         title: "🎯 PROJETO GIVAWAYS",

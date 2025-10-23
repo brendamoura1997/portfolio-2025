@@ -21,7 +21,7 @@ const Body = () => {
         className="absolute inset-0 w-full h-full object-cover z-0"
       />
 
-      <div className="z-20 relative">
+      <div className="relative">
         {/* Gradiente começa aqui, antes do About */}
         <div className="absolute h-[20%] inset-0 bg-gradient-to-b from-black via-black/70 to-transparent pointer-events-none" />
 

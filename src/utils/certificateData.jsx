@@ -16,7 +16,7 @@ const getBanner = (bannerName) => {
 
 const certificationsData = [
   {
-    title: "Diploma de Graduação em Ciência da Computação",
+    title: "Graduação em Ciência da Computação",
     issuer: "IFC, Sônia Regina de Souza Fernandes",
     date: "04/2023",
   },
@@ -33,7 +33,7 @@ const certificationsData = [
   },
   {
     title: "User Experience",
-    issuer: "FIAP- Centro Universitário, Wagner Sanchez, John Paul Lima",
+    issuer: "FIAP Centro Universitário, Wagner Sanchez, John Paul Lima",
     date: "02/2022",
     certificateLink: "",
   },

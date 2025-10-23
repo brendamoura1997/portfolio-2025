@@ -29,7 +29,6 @@ body,
   color: #e5e7eb;
 }
 
-/* Add safe area padding so content doesn't butt against the device's bottom UI */
 body {
   padding-bottom: env(safe-area-inset-bottom, 0);
   -webkit-tap-highlight-color: transparent;
@@ -69,6 +68,7 @@ body {
   --text-gray: #c7d4d5;
   --light-gray: #ebeced;
   --text-light-gray: #e5e7eb;
+  --text-gray-muted: #808a9c;
 
   --bg-dark-cyber: #0b090a;
 

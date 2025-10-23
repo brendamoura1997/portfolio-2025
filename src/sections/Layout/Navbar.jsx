@@ -79,15 +79,15 @@ const Navbar = () => {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: isMounted ? 1 : 0, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="fixed top-0 z-50 w-full bg-[#090d14]/65 backdrop-blur-3xl flex justify-end lg:justify-center px-4 
-      shadow-[0_10px_15px_rgba(1,10,22,0.9)]"
+      className="fixed top-0 z-30 md:z-50 w-full bg-[#090d14]/65 backdrop-blur-3xl flex justify-end lg:justify-center 
+      px-1 md:px-4 shadow-[0_10px_15px_rgba(1,10,22,0.9)]"
     >
       {/* Desktop Navbar */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: isMounted ? 1 : 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="hidden lg:flex items-center justify-center w-full clip-diagonal 
+        className="hidden md:flex items-center justify-center w-full clip-diagonal 
          transition-all duration-500 BODY1 text-sm"
       >
         {menuItems.map((item, index) => (
@@ -116,16 +116,22 @@ const Navbar = () => {
       </motion.div>
 
       {/* Mobile & Tablet Navbar */}
-      <div className="lg:hidden flex">
+      <div className="md:hidden flex">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="p-2 bg-[#111] cursor-pointer border border-[var(--neon-cyan)] hover:border-[var(--neon-cyan)] 
-          rounded-md active:scale-90 transition-transform duration-150 ease-in-out"
+          className={`p-2 bg-[#111] cursor-pointer border 
+            ${
+              isOpen
+                ? "border-[var(--neon-cyan)]/100"
+                : "border-[var(--neon-cyan)]/20"
+            }
+             hover:border-[var(--neon-cyan)]/100 
+          rounded-md active:scale-90 transition-transform duration-150 ease-in-out`}
         >
           {isOpen ? (
-            <X size={24} color="var(--light-cyan)" />
+            <X size={15} color="var(--neon-cyan)" />
           ) : (
-            <Menu size={24} color="var(--neon-cyan)" />
+            <Menu size={15} color="var(--neon-cyan)" />
           )}
         </button>
       </div>
