@@ -27,7 +27,7 @@ const CertificateCard = ({ title, issuer, date, imageSrc, onClick }) => {
     <div
       ref={cardRef}
       className="relative flex flex-col justify-around w-full max-w-[28rem] h-auto bg-[#000]/20 backdrop-blur-sm px-4 pb-3 
-      mb-5 rounded-xl group pt-3 hover:animate-[pulse-glow-button_1.5s_ease-in-out_infinite] md:h-90
+      rounded-xl group pt-3 hover:animate-[pulse-glow-button_1.5s_ease-in-out_infinite] md:h-90
       overflow-hidden  md:max-w-[28rem] border border-transparent 
       hover:border-[var(--neon-cyan)]/55 transition-all duration-300 
       shadow-[-0px_-0px_20px_5px_#013880] sm:shadow-[-0px_-0px_15px_5px_#013880] cursor-pointer"
@@ -93,13 +93,13 @@ const CertificateCard = ({ title, issuer, date, imageSrc, onClick }) => {
         </h3>
         <p
           className="flex px-2 pt-1 text-[var(--text-light-gray)] BODY1
-        text-sm md:text-md BODY1 text-center"
+        text-xs md:text-sm BODY1 text-center"
         >
           Por: {issuer}
         </p>
         <p
-          className="flex px-2 pb-1 text-gray-500 BODY1
-        text-sm md:text-md BODY1 text-center leading-relaxed"
+          className="flex px-2 pb-1 text-[var(--text-gray-muted)] BODY1
+        text-xs md:text-sm BODY1 text-center leading-relaxed"
         >
           Data: {date}
         </p>

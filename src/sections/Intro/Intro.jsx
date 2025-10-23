@@ -34,7 +34,7 @@ const Intro = ({ id }) => {
     <div
       id={id}
       ref={containerRef}
-      className="relative flex flex-col pt-25 sm:pt-0 sm:justify-center bg-transparent text-white overflow-hidden min-h-screen z-20"
+      className="relative flex flex-col pt-20 lg:pt-25 sm:pt-0 sm:justify-center bg-transparent text-white overflow-hidden min-h-screen z-20"
     >
       <video
         className="absolute inset-0 w-full h-full object-cover z-0"
@@ -50,8 +50,8 @@ const Intro = ({ id }) => {
       <div className="w-full flex flex-col justify-center items-center relative">
         <div
           ref={textRef}
-          className="px-5 py-20 md:py-15 md:px-5 text-center bg-[#000000]/10 backdrop-blur-sm 
-          rounded-xl shadow-[-0px_-0px_20px_5px_#013880] sm:shadow-[-0px_-0px_20px_0px_#013880]
+          className="px-3 lg:px-5 py-25 md:py-30 lg:py-15 text-center bg-[#000000]/10 backdrop-blur-sm 
+          md:rounded-xl shadow-[-0px_-0px_20px_5px_#013880] sm:shadow-[-0px_-0px_20px_0px_#013880]
           flex justify-center md:w-[640px] items-center"
         >
           <div className="flex flex-col justify-center md:w-[509px]">
@@ -61,8 +61,8 @@ const Intro = ({ id }) => {
                 section?.scrollIntoView({ behavior: "smooth" });
               }}
               className="flex w-full cursor-pointer justify-center text-center items-center T1 text-[#ceffff] neon-text-glow-cyan 
-            text-[3.1rem] leading-none md:text-6xl py-2 hover:animate-[pulse-glow-text_1s_ease-in-out_infinite] transition-colors 
-            duration-100 "
+            text-[2.2rem] sm:text-[2.5rem] leading-none md:text-6xl py-2 hover:animate-[pulse-glow-text_1s_ease-in-out_infinite] 
+            transition-colors duration-100 "
             >
               BRENDA MOURA
             </button>
@@ -86,9 +86,9 @@ const Intro = ({ id }) => {
               <br className="hidden sm:inline" /> da Computação e a criatividade
               de quem desafia limites.
             </h1>
-            <div className="flex flex-col sm:flex-row justify-center text-lg sm:text-sm md:text-md gap-3 sm:gap-7 BODY1">
+            <div className="flex flex-row justify-center text-xs md:text-sm gap-3 sm:gap-7 BODY1">
               <NeonButton
-                width="w-full md:w-52 text-sm md:text-md"
+                width="w-full md:w-52"
                 paddingY="py-3"
                 text="Ver Carreira"
                 onClick={() => {
@@ -98,7 +98,7 @@ const Intro = ({ id }) => {
               />
 
               <NeonButton
-                width="w-full md:w-52 text-sm md:text-md"
+                width="w-full md:w-52"
                 paddingY="py-3"
                 text="Download do Currículo"
                 onClick={() => {

@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { experience } from "../../utils/experienceData";
 import { education } from "../../utils/educationData";
-import CarrerModal from "./CarrerModal";
+import CareerModal from "./CareerModal";
 import CareerGrid from "../../components/CareerGrid";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -115,7 +115,7 @@ const Career = ({ id }) => {
 
   return (
     <section
-      className="px-4 sm:px-6 md:px-10 pt-30 flex flex-col justify-center items-center"
+      className="px-1 md:px-10 pt-30 flex flex-col justify-center items-center"
       id={id}
     >
       <h3
@@ -125,7 +125,7 @@ const Career = ({ id }) => {
         CARREIRA
       </h3>
 
-      <div className="pt-5 sm:pt-10 grid grid-cols-1 md:grid-cols-2 gap-15 sm:gap-40 max-w-max">
+      <div className="pt-5 lg:pt-10 grid grid-cols-1 md:grid-cols-2 gap-15 lg:gap-40 max-w-max z-20">
         <CareerGrid
           title="EXPERIÊNCIA"
           data={experience}
@@ -150,9 +150,9 @@ const Career = ({ id }) => {
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="relative max-w-[90%] md:max-w-[70%]"
+            className="relative max-w-[90%] md:max-w-[70%] z-50"
           >
-            <CarrerModal
+            <CareerModal
               {...selectedExperience}
               onClose={() => setSelectedExperience(null)}
             />
@@ -169,7 +169,7 @@ const Career = ({ id }) => {
             onClick={(e) => e.stopPropagation()}
             className="relative w-full md:max-w-[70%]"
           >
-            <CarrerModal
+            <CareerModal
               {...selectedEducation}
               onClose={() => setSelectedEducation(null)}
             />

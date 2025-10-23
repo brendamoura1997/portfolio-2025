@@ -9,7 +9,7 @@ const CareerGrid = ({ title, data, setSelected, cardsRef, headingRef }) => {
       >
         {title}
       </h3>
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6 z-10">
         {data.map((item, index) => (
           <div key={index} ref={(el) => (cardsRef.current[index] = el)}>
             <CareerCard {...item} onClick={() => setSelected(item)} />

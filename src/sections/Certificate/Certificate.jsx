@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { certifications } from "../../utils/certificateData";
 import NeonButton from "../../components/ButtonNeon";
+import useScreenSize from "../../hooks/useScreenSize";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,6 +16,7 @@ const Certificate = ({ id }) => {
   const sectionRef = useRef(null);
   const headingRef = useRef(null);
   const cardRefs = useRef([]);
+  const screenSize = useScreenSize();
 
   useEffect(() => {
     gsap.fromTo(
@@ -64,13 +66,23 @@ const Certificate = ({ id }) => {
     }, 50);
   };
 
-  const visibleCerts = showAll ? certifications : certifications.slice(0, 3);
+  const showCertificates = () => {
+    if (screenSize >= 768 && screenSize < 1024 && !showAll) {
+      return certifications.slice(0, 4);
+    } else if (!showAll) {
+      return certifications.slice(0, 3);
+    }
+
+    return certifications;
+  };
+
+  const visibleCerts = showCertificates();
 
   return (
     <section
       id={id}
       ref={sectionRef}
-      className="text-white pt-15 md:pt-30 pb-12 px-4 sm:px-6 md:px-10 flex flex-col
+      className="text-white pt-15 md:pt-30 pb-12 px-1 lg:px-10 flex flex-col
       justify-center items-center"
     >
       <div
@@ -80,14 +92,15 @@ const Certificate = ({ id }) => {
 
       <h3
         ref={headingRef}
-        className="text-3xl md:text-4xl T1 font-bold text-[var(--light-cyan-title)] neon-text-glow-cyan pb-5 md:pb-15 text-center"
+        className="text-3xl md:text-4xl T1 font-bold text-[var(--light-cyan-title)] neon-text-glow-cyan pb-5 
+        lg:pb-10 text-center"
       >
         CERTIFICADOS
       </h3>
 
       <div
-        className={`grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10 mt-6 md:mt-10 
-          relative justify-center ${showAll ? "mb-0" : "mb-15"}`}
+        className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 lg:gap-10 mt-6 md:mt-10 
+          relative justify-center ${showAll ? "mb-0" : "mb-15 md:mb-20"}`}
       >
         <AnimatePresence>
           {visibleCerts.map((cert, index) => (
@@ -125,7 +138,7 @@ const Certificate = ({ id }) => {
 
       {selectedCertificate && (
         <div
-          className="fixed inset-0 flex items-center justify-center z-[9999] p-2 sm:p-4 bg-[#050d1a]/80 backdrop-blur-lg"
+          className="fixed inset-0 flex items-center justify-center z-[9999] p-2 sm:p-0 bg-[#050d1a]/80 backdrop-blur-lg"
           onClick={() => setSelectedCertificate(null)}
         >
           <div onClick={(e) => e.stopPropagation()} className="relative">
