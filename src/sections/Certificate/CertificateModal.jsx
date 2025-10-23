@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const CertificateModal = ({ title, issuer, date, imageSrc, onClose }) => {
   return (
     <motion.div
-      className="fixed inset-0 flex items-center justify-center p-4 "
+      className="fixed inset-0 flex items-center justify-center"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -12,10 +12,11 @@ const CertificateModal = ({ title, issuer, date, imageSrc, onClose }) => {
     >
       <motion.div
         onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
-        className="relative px-6 md:px-8 pt-8 md:pt-6 max-w-4xl w-full max-h-[80vh] bg-[#090d14]/50 backdrop-blur-lg
+        className="relative px-2 md:px-8 pt-0 lg:pt-6 w-4xl lg:w-[80vw] h-[100%] lg:h-[95%] 
+        
          text-white rounded-lg shadow-[-0px_-0px_20px_5px_#013880] sm:shadow-[-0px_-0px_20px_0px_#013880] 
            animate-[pulse-glow-about_3.0s_ease-in-out_infinite] hover:animate-[pulse-glow-button_3.0s_ease-in-out_infinite]
-           transition-all duration-300 flex flex-col"
+           transition-all duration-300 flex flex-col items-center justify-center bg-[#090d14]/50 backdrop-blur-lg"
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         exit={{ scale: 0.8, opacity: 0 }}
@@ -35,18 +36,21 @@ const CertificateModal = ({ title, issuer, date, imageSrc, onClose }) => {
         <img
           src={imageSrc}
           alt={title}
-          className="w-full h-35 md:h-85 lg:h-95 object-contain rounded-lg border border-[#252525]"
+          // className="w-full h-35 md:h-85 lg:h-95 object-contain rounded-lg border border-[#252525]"
+          className="w-full h-[50%] sm:h-[75%] object-contain rounded-lg border border-[#373737]"
         />
 
         {/* Certificate Details */}
-        <div className="flex flex-col items-center text-center py-8 md:my-auto lg:my-auto">
-          <h3 className="flex text-xl text-l font-bold text-[var(--light-cyan-title)]">
+        <div className="flex flex-col items-center text-center py-2 lg:py-8">
+          <h3 className="flex text-lg md:text-xl font-bold text-[var(--light-cyan-title)]">
             {title}
           </h3>
-          <p className="text-md text-[var(--text-light-gray)] T2 mt-2">
+          <p className="text-xs md:text-base text-[var(--text-light-gray)] T2 mt-2">
             Emissor: {issuer}
           </p>
-          <p className="text-sm text-gray-500 mt-2">Data: {date}</p>
+          <p className="text-xs md:text-sm text-[var(--text-gray-muted)] mt-2">
+            Data: {date}
+          </p>
         </div>
       </motion.div>
     </motion.div>

@@ -82,7 +82,9 @@ const About = ({ id }) => {
   return (
     <section
       id={id}
-      className="relative text-white pt-20 sm:pt-30 pb-10 px-1 md:px-10 overflow-hidden"
+      className={`relative text-white pt-20 sm:pt-30 pb-10 ${
+        showMore ? `px-0` : `px-1`
+      } md:px-10 overflow-hidden`}
     >
       <h3
         ref={headingRef}
