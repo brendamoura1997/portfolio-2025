@@ -36,7 +36,7 @@ const Body = () => {
       <Footer />
 
       <p className="text-[var(--light-gray)]/70 text-sm T2 text-center relative h-10 flex justify-center items-center">
-        © 2025 BRENDA MOURA | All Rights Reserved.
+        © 2025 BRENDA MOURA TI | All Rights Reserved.
       </p>
       {/* Neon Line */}
       <span
