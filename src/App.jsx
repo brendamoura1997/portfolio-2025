@@ -11,17 +11,25 @@ function App() {
       "@context": "https://schema.org",
       "@type": "Person",
       name: "Brenda Moura",
+      additionalName: "Brenda Alves Moura",
       alternateName: "Brenda Moura TI",
-      description:
-        "Brenda Moura TI - Desenvolvedora Full-Stack especializada em React, TypeScript, Node.js e tecnologias de TI",
+      disambiguatingDescription:
+        "Desenvolvedora Full-Stack especializada em Desenvolvimento Web com React, TypeScript, Node.js e tecnologias de TI",
       jobTitle: "Desenvolvedora Full-Stack TI",
-      url: "https://brendamourati.netlify.app",
-      sameAs: [
-        "https://www.linkedin.com/in/brenda-moura-ti",
-        "https://github.com/brendamoura1997",
-      ],
+      description:
+        "Portfolio de Brenda Moura TI - Desenvolvedora Full-Stack especializada em Desenvolvimento Web com React, TypeScript, Node.js e tecnologias de TI",
+
       knowsAbout: [
+        "Desenvolvimento Web",
+        "Web Development",
         "Desenvolvimento TI",
+        "TI Development",
+        "Technology Development",
+        "Desenvolvimento Full-Stack",
+        "Full-Stack Development",
+        "Full Stack Development",
+        "Fullstack Development",
+        "Desenvolvimento Full Stack",
         "React",
         "TypeScript",
         "JavaScript",
@@ -30,8 +38,16 @@ function App() {
         "Nest.js",
         "PostgreSQL",
         "MongoDB",
+        "MySQL",
         "AWS",
+        "Git",
+        "Scrum",
+        "Scrum e Metodologias Ágeis",
+        "Agile Methodologies",
+        "UI/UX Design",
+        "Web Design",
         "Tecnologia da Informação",
+        "Information Technology",
       ],
       hasOccupation: {
         "@type": "Occupation",
@@ -41,6 +57,37 @@ function App() {
           name: "Brasil",
         },
       },
+      url: "https://brendamourati.netlify.app",
+      sameAs: [
+        "https://www.linkedin.com/in/brenda-moura-ti",
+        "https://github.com/brendamoura1997",
+      ],
+      knowsLanguage: ["en", "pt", "es", "ru"],
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "São Paulo",
+        addressCountry: "BR",
+      },
+      birthDate: "1997-08-21",
+      gender: "Female",
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": "https://brendamourati.netlify.app",
+      },
+      identifier: [
+        {
+          "@type": "PropertyValue",
+          propertyID: "GitHub",
+          value: "brendamoura1997",
+          url: "https://github.com/brendamoura1997",
+        },
+        {
+          "@type": "PropertyValue",
+          propertyID: "LinkedIn",
+          value: "brenda-moura-ti",
+          url: "https://www.linkedin.com/in/brenda-moura-ti",
+        },
+      ],
     };
 
     const script = document.createElement("script");
