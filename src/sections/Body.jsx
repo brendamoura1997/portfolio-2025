@@ -1,5 +1,5 @@
 import About from "./About/About";
-// import Project from "./Project/Project";
+import Project from "./Project/Project";
 import Skill from "./Skill/Skill";
 import Certificate from "./Certificate/Certificate";
 import Contact from "./Contact/Contact";
@@ -27,7 +27,7 @@ const Body = () => {
 
         <About id="about" />
         <Career id="career" />
-        {/* <Project id="projects" /> */}
+        <Project id="projects" />
         <Skill id="skills" />
         <Certificate id="certificates" />
         <Contact id="contact" />

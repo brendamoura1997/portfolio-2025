@@ -122,10 +122,6 @@ const CertificateCard = ({ title, issuer, date, imageSrc, onClick }) => {
         active:scale-90 ease-in-out border border-[var(--neon-cyan)]/50"
           />
         </a>
-        <span
-          className="absolute bottom-[7.5px] left-1/2 w-full h-[0.7px] -translate-x-1/2 bg-gradient-to-r from-transparent 
-      via-[var(--neon-cyan)] to-transparent opacity-100 hover:via-[#b8ffff]"
-        />
       </div>
 
       {/* Particle Effect */}
