@@ -210,7 +210,7 @@ export const skills = {
       icon: getIcon("jira"),
       color: "var(--advanced-level)",
       colorTitle: "var(--title-advanced-level)",
-      skillName: "avançado",
+      skillName: "Avançado",
     },
     {
       name: "Java",
@@ -244,7 +244,7 @@ export const skills = {
       icon: getIcon("eua"),
       color: "var(--advanced-level)",
       colorTitle: "var(--title-advanced-level)",
-      skillName: "avançado",
+      skillName: "Avançado",
     },
     {
       name: "Espanhol",

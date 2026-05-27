@@ -33,7 +33,7 @@ const Project = ({ id }) => {
             start: "top 85%",
             toggleActions: "play none none none",
           },
-        }
+        },
       );
     }
 
@@ -54,7 +54,7 @@ const Project = ({ id }) => {
             start: "top 85%",
             toggleActions: "play none none none",
           },
-        }
+        },
       );
     });
   }, []);
@@ -80,7 +80,8 @@ const Project = ({ id }) => {
     <section
       id={id}
       ref={sectionRef}
-      className="text-white pt-15 md:pt-30 pb-12 px-4 sm:px-6 md:px-10 relative"
+      className="text-white pt-15 md:pt-30 pb-12 px-1 lg:px-10 flex flex-col
+      justify-center items-center"
     >
       <div
         className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),
@@ -89,7 +90,8 @@ const Project = ({ id }) => {
 
       <h3
         ref={headingRef}
-        className="text-3xl md:text-4xl T1 font-bold text-[var(--light-cyan-title)] neon-text-glow-cyan pb-5 md:pb-15 text-center"
+        className="text-3xl md:text-4xl T1 font-bold text-[var(--light-cyan-title)] neon-text-glow-cyan pb-5 
+        lg:pb-10 text-center"
       >
         PROJETOS
       </h3>
@@ -168,10 +170,9 @@ const Project = ({ id }) => {
         </AnimatePresence>
       </div>
 
-      <div className="relative">
+      {/* <div className="relative flex justify-center">
         <motion.div
-          ref={buttonRef}
-          className="absolute right-5 sm:right-5 bottom-0 flex items-center justify-center w-8 h-8
+          className="absolute  bottom-0 flex items-center justify-center w-8 h-8
           sm:w-10 sm:h-10 border-2 text-lg sm:text-xl cursor-pointer"
           initial={{ rotate: 0, y: 0 }}
           animate={{ rotate: showAll ? 180 : 0, y: showAll ? 50 : 0 }}
@@ -185,7 +186,7 @@ const Project = ({ id }) => {
             onClick={() => handleShowAllClick()}
           />
         </motion.div>
-      </div>
+      </div> */}
 
       {selectedProject && (
         <div

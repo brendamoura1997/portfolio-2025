@@ -1,9 +1,16 @@
 import React, { useRef } from "react";
-import codeIcon from "../assets/images/social-media/code-square.png";
+import codeIcon from "../assets/images/social-media/github.png";
 import webIcon from "../assets/images/social-media/web-square.png";
 import moreIcon from "../assets/images/social-media/more.png";
 
-const ProjectCard = ({ title, desc, sourceLink, imageSrc, onClick }) => {
+const ProjectCard = ({
+  title,
+  description,
+  websiteLink,
+  githubLink,
+  imageSrc,
+  onClick,
+}) => {
   const cardRef = useRef(null);
 
   const handleMouseMove = (e) => {
@@ -32,7 +39,7 @@ const ProjectCard = ({ title, desc, sourceLink, imageSrc, onClick }) => {
       mb-5 rounded-xl group pt-3 hover:animate-[pulse-glow-button_1.5s_ease-in-out_infinite]
       overflow-hidden  md:max-w-[28rem] border border-transparent 
       hover:border-[var(--neon-cyan)]/55 transition-all duration-300 
-      shadow-[-0px_-0px_20px_5px_#013880] sm:shadow-[-0px_-0px_15px_5px_#013880]"
+      shadow-[-0px_-0px_20px_5px_#013880] sm:shadow-[-0px_-0px_15px_5px_#013880] cursor-pointer"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       onClick={onClick}
@@ -96,7 +103,7 @@ const ProjectCard = ({ title, desc, sourceLink, imageSrc, onClick }) => {
           className="flex px-2 py-1 text-[var(--text-light-gray)] BODY1
         text-sm md:text-md BODY1 text-justify leading-relaxed"
         >
-          {desc}
+          {description}
         </p>
       </div>
 
@@ -105,7 +112,7 @@ const ProjectCard = ({ title, desc, sourceLink, imageSrc, onClick }) => {
         {/* CODE */}
         <div className="relative">
           <a
-            href={sourceLink}
+            href={githubLink}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block text-[var(--neon-cyan)] hover:text-white transition-all"
@@ -121,16 +128,12 @@ const ProjectCard = ({ title, desc, sourceLink, imageSrc, onClick }) => {
             "
             />
           </a>
-          <span
-            className="absolute bottom-[7.5px] left-1/2 w-full h-[0.7px] -translate-x-1/2 bg-gradient-to-r from-transparent 
-                      via-[var(--neon-cyan)] to-transparent opacity-100 hover:via-[#b8ffff]"
-          />
         </div>
 
         {/* WEB ICON */}
         <div className="relative">
           <a
-            href={sourceLink}
+            href={websiteLink}
             target="_blank"
             title="Acessar o site do projeto"
             rel="noopener noreferrer"
@@ -145,10 +148,6 @@ const ProjectCard = ({ title, desc, sourceLink, imageSrc, onClick }) => {
             active:scale-90 ease-in-out border border-[var(--neon-cyan)]/50"
             />
           </a>
-          <span
-            className="absolute bottom-[7.5px] left-1/2 w-full h-[0.7px] -translate-x-1/2 bg-gradient-to-r from-transparent 
-                       via-[var(--neon-cyan)] to-transparent opacity-100 hover:via-[#b8ffff]"
-          />
         </div>
 
         {/* MORE */}
@@ -168,10 +167,6 @@ const ProjectCard = ({ title, desc, sourceLink, imageSrc, onClick }) => {
             active:scale-90 ease-in-out border border-[var(--neon-cyan)]/50"
             />
           </a>
-          <span
-            className="absolute bottom-[7.5px] left-1/2 w-full h-[0.7px] -translate-x-1/2 bg-gradient-to-r from-transparent 
-                    via-[var(--neon-cyan)] to-transparent opacity-100 hover:via-[#b8ffff]"
-          />
         </div>
       </div>
 
