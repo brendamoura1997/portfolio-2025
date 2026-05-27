@@ -31,7 +31,7 @@ const Certificate = ({ id }) => {
           trigger: headingRef.current,
           start: "top 85%",
         },
-      }
+      },
     );
   }, []);
 
@@ -53,7 +53,7 @@ const Certificate = ({ id }) => {
               toggleActions: "play none none none",
             },
             delay: index * 0.1,
-          }
+          },
         );
       }
     });
@@ -138,7 +138,8 @@ const Certificate = ({ id }) => {
 
       {selectedCertificate && (
         <div
-          className="fixed inset-0 flex items-center justify-center z-[9999] p-2 sm:p-0 bg-[#050d1a]/80 backdrop-blur-lg"
+          className="fixed inset-0 flex items-center justify-center z-[9999] p-2 sm:p-0 bg-[#050d1a]/80 backdrop-blur-lg
+          border border-amber-200"
           onClick={() => setSelectedCertificate(null)}
         >
           <div onClick={(e) => e.stopPropagation()} className="relative">

@@ -1,14 +1,15 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import codeIcon from "../../assets/images/social-media/code-square.png";
+import codeIcon from "../../assets/images/social-media/github.png";
 import webIcon from "../../assets/images/social-media/web-square.png";
 import NeonButton from "../../components/ButtonNeon";
 
 const ProjectModal = ({
   title,
-  tech,
-  desc,
-  sourceLink,
+  subtitle,
+  description,
+  websiteLink,
+  githubLink,
   imageSrc,
   extraDetails,
   onClose,
@@ -76,34 +77,58 @@ const ProjectModal = ({
             <h3 className="flex text-center text-xl text-l font-bold text-[var(--light-cyan-title)]">
               {title}
             </h3>
-            <p className="text-md text-[var(--neon-cyan)] T2 mt-2">{tech}</p>
-            <p className="text-sm text-[var(--text-gray)] mt-2">{desc}</p>
+            <p className="text-md text-[var(--neon-cyan)] T2 mt-2">
+              {subtitle}
+            </p>
+            <p className="text-sm text-[var(--text-gray)] mt-2">
+              {description}
+            </p>
 
             {/* Expandable Extra Details */}
             <AnimatePresence>
-              {isExpanded && (
-                <motion.div
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: "auto", opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="mt-4 p-4 bg-[#222] rounded-lg"
-                >
-                  <h4 className="text-lg font-bold text-[var(--neon-cyan)] T2">
-                    O que esse projeto oferece:
-                  </h4>
-                  <ul className="list-disc list-inside text-gray-300 text-sm mt-2">
-                    {extraDetails
-                      .split(". ")
-                      .filter((point) => point.trim() !== "")
-                      .map((point, index) => (
-                        <li key={index} className="mt-1">
-                          {point.trim()}
-                        </li>
-                      ))}
-                  </ul>
-                </motion.div>
-              )}
+              {isExpanded &&
+                extraDetails &&
+                Array.isArray(extraDetails) &&
+                extraDetails.length > 0 && (
+                  <motion.ul
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="text-left md:text-justify text-gray-300 leading-relaxed list-none 
+                    text-md mt-4 bg-[#FFF]/10 px-4 py-6 md:py-5 md:px-6 rounded-lg overflow-hidden 
+                    flex flex-col gap-5 text-sm md:text-base"
+                  >
+                    {extraDetails.map((detailGroup, groupIndex) => (
+                      <div key={groupIndex} className="flex flex-col gap-4">
+                        {detailGroup.title && (
+                          <p
+                            className="font-semibold text-[var(--light-cyan-title)]"
+                            dangerouslySetInnerHTML={{
+                              __html: detailGroup.title,
+                            }}
+                          />
+                        )}
+
+                        {detailGroup.items &&
+                          Array.isArray(detailGroup.items) &&
+                          detailGroup.items.length > 0 && (
+                            <>
+                              {detailGroup.items.map((detail, index) => (
+                                <li
+                                  key={index}
+                                  dangerouslySetInnerHTML={{ __html: detail }}
+                                  className="[&_b]:text-[var(--text-cyan)] relative 
+                                  pl-5 md:pl-10 before:content-['»'] before:absolute 
+                                  before:left-0 md:before:left-5 before:text-[var(--light-cyan-title)]"
+                                />
+                              ))}
+                            </>
+                          )}
+                      </div>
+                    ))}
+                  </motion.ul>
+                )}
             </AnimatePresence>
           </div>
         </div>
@@ -113,7 +138,7 @@ const ProjectModal = ({
           {/* CODE */}
           <div className="relative">
             <a
-              href={sourceLink}
+              href={githubLink}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block text-[var(--neon-cyan)] hover:text-white transition-all"
@@ -123,22 +148,18 @@ const ProjectModal = ({
                 src={codeIcon}
                 alt="GitHub"
                 title="Ver código fonte"
-                className="w-8 h-8 sm:w-11 sm:h-11 transition duration-300 shadow hover:border-[var(--light-cyan)] rounded-full
+                className="w-8 h-8 sm:w-10 sm:h-10 transition duration-300 shadow hover:border-[var(--light-cyan)] rounded-full
                     hover:animate-[pulse-glow-button_1.5s_ease-in-out_infinite]
                     active:scale-90 ease-in-out border border-[var(--neon-cyan)]/50
                     "
               />
             </a>
-            <span
-              className="absolute bottom-[7.5px] left-1/2 w-full h-[0.7px] -translate-x-1/2 bg-gradient-to-r from-transparent 
-                              via-[var(--neon-cyan)] to-transparent opacity-100 hover:via-[#b8ffff]"
-            />
           </div>
 
           {/* WEB ICON */}
           <div className="relative">
             <a
-              href={sourceLink}
+              href={websiteLink}
               target="_blank"
               title="Acessar o site do projeto"
               rel="noopener noreferrer"
@@ -148,15 +169,11 @@ const ProjectModal = ({
               <img
                 src={webIcon}
                 alt="Web Icon"
-                className="w-8 h-8 sm:w-11 sm:h-11 transition duration-300 shadow hover:border-[var(--light-cyan)] rounded-full
+                className="w-8 h-8 sm:w-10 sm:h-10 transition duration-300 shadow hover:border-[var(--light-cyan)] rounded-full
                     hover:animate-[pulse-glow-button_1.5s_ease-in-out_infinite]
                     active:scale-90 ease-in-out border border-[var(--neon-cyan)]/50"
               />
             </a>
-            <span
-              className="absolute bottom-[7.5px] left-1/2 w-full h-[0.7px] -translate-x-1/2 bg-gradient-to-r from-transparent 
-                               via-[var(--neon-cyan)] to-transparent opacity-100 hover:via-[#b8ffff]"
-            />
           </div>
 
           {/* Explorar Mais Button */}
