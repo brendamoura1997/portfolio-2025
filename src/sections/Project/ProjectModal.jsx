@@ -80,8 +80,8 @@ const ProjectModal = ({
             <p className="text-md text-[var(--neon-cyan)] T2 mt-2">
               {subtitle}
             </p>
-            <p className="text-sm text-[var(--text-gray)] mt-2">
-              {description}
+            <p className="text-justify text-sm md:text-base text-gray-300 leading-relaxed break-words [&_b]:text-[var(--text-cyan)] py-3 pr-4">
+              <span dangerouslySetInnerHTML={{ __html: description }} />
             </p>
 
             {/* Expandable Extra Details */}
