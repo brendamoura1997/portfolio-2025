@@ -5,7 +5,7 @@ import moreIcon from "../assets/images/social-media/more.png";
 
 const ProjectCard = ({
   title,
-  description,
+  subtitle,
   websiteLink,
   githubLink,
   imageSrc,
@@ -101,9 +101,9 @@ const ProjectCard = ({
         </h3>
         <p
           className="flex px-2 py-1 text-[var(--text-light-gray)] BODY1
-        text-sm md:text-md BODY1 text-justify leading-relaxed"
+        text-sm md:text-md BODY1 leading-relaxed justify-center"
         >
-          {description}
+          {subtitle}
         </p>
       </div>
 
